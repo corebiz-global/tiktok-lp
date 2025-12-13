@@ -1,0 +1,151 @@
+{
+  "criarContaSeller": {
+    "hero": {
+      "badge": "Tutorial • TikTok Shop",
+      "title": "Create a TikTok Shop Seller Account",
+      "description": "Creating a seller account is the first step to list your products on TikTok Shop. With it, you can manage products, orders, shipping, and payments.",
+      "cta": "Create TikTok Shop Account"
+    },
+    "step1": {
+      "title": "Step 1 — Create a seller account",
+      "description": "Access the Seller Center and start the registration process.",
+      "intro": {
+        "before": "When starting the registration, remember to correctly select the ",
+        "highlight": "sales country",
+        "after": ". You can create your account using:"
+      },
+      "accountOptions": [
+        "TikTok account",
+        "TikTok Business account",
+        "Email registration"
+      ],
+      "imageAlt": "Create TikTok Shop account",
+      "documents": {
+        "title": "Required documentation for registration",
+        "items": [
+          "Legal representative’s identification document",
+          "Verification selfies holding the ID next to the face (photo visible)",
+          "Company document",
+          "Full legal business name",
+          "Company registration number",
+          "Company opening date",
+          "Registered business address",
+          "Bank account",
+          "Tax information"
+        ]
+      }
+    },
+    "step2": {
+      "title": "Step 2 — Create brands on TikTok Shop",
+      "description": "Mandatory step before catalog integration.",
+      "paragraphs": {
+        "first": "Before starting the catalog integration, it is essential to create product brands. This step prevents blocks or errors during processing.",
+        "second": "In addition, brand authorization proves that the seller has permission to sell products on TikTok Shop."
+      },
+      "steps": [
+        "Access the home icon in the top menu",
+        "My account",
+        "Account settings",
+        "Qualification center",
+        "Brand qualification",
+        "Add brand authorization",
+        "Include the authorization type and required document"
+      ],
+      "imageAlt": "TikTok Shop brand configuration screen",
+      "alert": {
+        "title": "Brand name",
+        "description": "It will be necessary to link the brand in the VTEX app brand mapping. Therefore, save exactly the same name used in VTEX. Pay attention to spelling variations (uppercase/lowercase), as the match must be identical."
+      },
+      "footer": {
+        "before": "For more information, see the",
+        "link": "official TikTok brand documentation"
+      }
+    },
+    "links": {
+      "title": "Useful links — TikTok Shop",
+      "description": "Official documentation and policies to support your setup and operation.",
+      "items": {
+        "sellerRegistration": "Seller registration",
+        "accountSettings": "Account settings and customization",
+        "accountRights": "Rights and rules for the official TikTok Shop account",
+        "contentPolicy": "Content policy",
+        "adsPolicy": "Advertising policies",
+        "policyCenter": "Policy center",
+        "partnerDocs": "TikTok Shop Partner — Documentation"
+      }
+    }
+  },
+  "preRequisites": {
+    "guide": {
+      "title": "Your integration guide",
+      "description": "Step by step to configure and start selling.",
+      "steps": {
+        "step1": {
+          "title": "Before you start",
+          "description": "Essential prerequisites."
+        },
+        "step2": {
+          "title": "Connection",
+          "description": "Authorizations and credentials."
+        },
+        "step3": {
+          "title": "Synchronization",
+          "description": "Catalog, pricing, inventory, and orders."
+        }
+      },
+      "cta": "Start with Step 1"
+    },
+    "content": {
+      "title": "Before you start (Essential prerequisites)",
+      "description": "Make sure you have the following before starting the integration."
+    },
+    "items": {
+      "vtexAccount": {
+        "title": "Active VTEX account",
+        "description": "Have products, inventory, and commercial policy configured (the main policy is sufficient). Your VTEX account must be configured as a marketplace."
+      },
+      "tiktokSeller": {
+        "title": "TikTok Shop Seller account",
+        "description": "Create your seller account on TikTok Shop to start the integration.",
+        "cta": "Create seller account"
+      }
+    },
+    "alert": {
+      "title": "Important",
+      "description": "Currently, the Corebiz connector works only with the main VTEX account. For sub-account scenarios, a specific analysis is required."
+    },
+    "footer": {
+      "text": "If you already have everything above, you are ready for Step 2.",
+      "cta": "Go to Step 2"
+    }
+  },
+  "hero": {
+    "title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
+    "description": "Expand your reach and sell more on TikTok. This page ensures you have everything ready before starting the connector setup — no surprises along the way.",
+    "cta": {
+      "prerequisites": "View prerequisites",
+      "guide": "Go to the guide"
+    },
+    "benefits": {
+      "title": "Why integrate with the Corebiz Connector?",
+      "items": {
+        "globalReach": {
+          "title": "Global reach",
+          "description": "Take your products to a massive and highly engaged audience on TikTok."
+        },
+        "fullSync": {
+          "title": "Full synchronization",
+          "description": "Catalog, inventory, prices, and orders automatically synced between VTEX and TikTok Shop."
+        },
+        "simplifiedManagement": {
+          "title": "Simplified management",
+          "description": "Manage everything from the VTEX dashboard, with TikTok Shop configured as a marketplace."
+        },
+        "smoothExperience": {
+          "title": "Smooth experience",
+          "description": "Optimized connection flow for sellers and consumers."
+        }
+      }
+    }
+  }
+}
