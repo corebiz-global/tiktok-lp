@@ -47,7 +47,7 @@ const prereqs: Prereq[] = [
   },
 ];
 
-export default function PreRequisites() {
+export function PreRequisites({ nextStep }: { nextStep: () => void }) {
   const { t } = useTranslation();
 
   return (
@@ -84,8 +84,8 @@ export default function PreRequisites() {
 
             <Separator className="my-2" />
 
-            <Button asChild variant="outline" className="w-full rounded-2xl">
-              <Link href="#pre-requisitos">{t("preRequisites.guide.cta")}</Link>
+            <Button variant="outline" className="w-full rounded-2xl" onClick={nextStep}>
+              {t("preRequisites.guide.cta")}
             </Button>
           </CardContent>
         </Card>
@@ -131,8 +131,8 @@ export default function PreRequisites() {
 
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <p className="text-sm text-muted-foreground">{t("preRequisites.footer.text")}</p>
-            <Button asChild className="rounded-2xl">
-              <Link href="/step-2">{t("preRequisites.footer.cta")}</Link>
+            <Button className="rounded-2xl" onClick={nextStep}>
+              {t("preRequisites.footer.cta")}
             </Button>
           </div>
         </div>

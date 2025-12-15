@@ -93,7 +93,7 @@
           "description": "Catalog, pricing, inventory, and orders."
         }
       },
-      "cta": "Start with Step 1"
+      "cta": "Continue"
     },
     "content": {
       "title": "Before you start (Essential prerequisites)",
@@ -115,8 +115,8 @@
       "description": "Currently, the Corebiz connector works only with the main VTEX account. For sub-account scenarios, a specific analysis is required."
     },
     "footer": {
-      "text": "If you already have everything above, you are ready for Step 2.",
-      "cta": "Go to Step 2"
+      "text": "If you already have everything above, you are ready for the next step.",
+      "cta": "Continue"
     }
   },
   "hero": {
@@ -146,6 +146,49 @@
           "description": "Optimized connection flow for sellers and consumers."
         }
       }
+    }
+  },
+  "tiktokSetup": {
+    "title": "TikTok Shop setup",
+    "description": "Let’s prepare your TikTok Shop environment for the integration.",
+    "install": {
+      "title": "Install the Corebiz Connector on TikTok Shop",
+      "steps": [
+        "Access your TikTok Shop Seller Center",
+        "Navigate to \"Apps and agencies\" in the main menu",
+        "Click on \"App Store\"",
+        "Filter by \"Popular platforms\" with the value \"VTEX\"",
+        "Select the \"VTEX Sync by Corebiz\" application",
+        "Click \"Install\" and follow the instructions"
+      ]
+    },
+    "token": {
+      "title": "Generate the permission token",
+      "steps": [
+        "After installation, return to the \"App Store\" section",
+        "Locate the \"VTEX Sync by Corebiz\" application",
+        "Click the three dots (...) icon next to the app",
+        "Go to \"My apps and incidents\"",
+        "Find \"VTEX Sync\" and click \"Authorize\""
+      ]
+    },
+    "brands": {
+      "title": "Create and authorize your brands on TikTok Shop",
+      "steps": [
+        "In the Seller Center, click the home icon in the top menu",
+        "Go to \"My account\" > \"Account settings\"",
+        "Access \"Qualification center\" > \"Brand qualification\"",
+        "Click \"Add brand authorization\"",
+        "Include the authorization type and required document"
+      ]
+    },
+    "tip": {
+      "title": "Important tip",
+      "description": "Make sure the brand name on TikTok Shop matches exactly the one used in VTEX. This is essential for correct mapping and to avoid product blocks."
+    },
+    "footer": {
+      "before": "For more details, see the",
+      "link": "official TikTok Shop brand documentation"
     }
   }
 }

@@ -95,7 +95,7 @@
           "description": "Catálogo, preço, estoque e pedidos."
         }
       },
-      "cta": "Começar pelo Step 1"
+      "cta": "Continuar"
     },
     "content": {
       "title": "Antes de começar (Pré-requisitos essenciais)",
@@ -117,8 +117,8 @@
       "description": "Atualmente, o conector Corebiz funciona apenas com a conta principal VTEX. Para cenários com subcontas, é necessária uma análise específica."
     },
     "footer": {
-      "text": "Se você já tem tudo acima, você está pronta para o Step 2.",
-      "cta": "Ir para o Step 2"
+      "text": "Se você já tem tudo acima, você está pronta para o passo.",
+      "cta": "Continuar"
     }
   },
   "hero": {
@@ -148,6 +148,49 @@
           "description": "Processo de conexão otimizado para sellers e consumidores."
         }
       }
+    }
+  },
+  "tiktokSetup": {
+    "title": "Configuração no TikTok Shop",
+    "description": "Vamos preparar seu ambiente no TikTok Shop para a integração.",
+    "install": {
+      "title": "Passo 1 - Instale o Conector Corebiz no TikTok Shop",
+      "steps": [
+        "Acesse o seu TikTok Shop Seller Center",
+        "Navegue para \"Aplicativos e parceiros\" no menu principal",
+        "Clique em \"App Store\"",
+        "Filtre por \"Plataformas populares\" com o valor \"VTEX\"",
+        "Selecione o aplicativo \"VTEX Sync by Corebiz\"",
+        "Clique em \"Instalar\" e siga o passo a passo indicado"
+      ]
+    },
+    "token": {
+      "title": "Passo 2 - Gere o token de permissão",
+      "steps": [
+        "Após a instalação, acesse novamente a seção \"App Store\"",
+        "Localize o aplicativo \"VTEX Sync by Corebiz\"",
+        "Clique no ícone de três pontos (...) ao lado do aplicativo",
+        "Vá para \"Meus aplicativos e incidentes\"",
+        "Encontre \"VTEX Sync\" e clique em \"Autorizar\""
+      ]
+    },
+    "brands": {
+      "title": "Passo 3 - Crie e autorize suas marcas no TikTok Shop",
+      "steps": [
+        "No Seller Center, clique no ícone de casinha (Home) no menu superior",
+        "Vá para \"Minha conta\" > \"Configurações de conta\"",
+        "Acesse \"Centro de qualificação\" > \"Qualificação de marca\"",
+        "Clique em \"Adicionar autorização de marca\"",
+        "Inclua o tipo de autorização e o documento necessário"
+      ]
+    },
+    "tip": {
+      "title": "Dica importante",
+      "description": "Certifique-se de que a nomenclatura da marca no TikTok Shop seja exatamente a mesma utilizada na VTEX. Isso é essencial para o mapeamento correto e para evitar bloqueios de produtos."
+    },
+    "footer": {
+      "before": "Para mais detalhes, consulte a",
+      "link": "documentação oficial de marcas do TikTok Shop"
     }
   }
 }
