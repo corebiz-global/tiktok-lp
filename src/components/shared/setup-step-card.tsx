@@ -2,20 +2,22 @@
 
 import Image, { StaticImageData } from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { twMerge } from "tailwind-merge";
 
 type SetupStepCardProps = {
-  title: string;
+  title?: string;
   steps: string[];
   description?: string;
   image?: StaticImageData | string;
   imageAlt?: string;
+  className?: string;
 };
 
-export function SetupStepCard({ title, steps, image, imageAlt, description }: SetupStepCardProps) {
+export function SetupStepCard({ title, steps, image, imageAlt, description, className }: SetupStepCardProps) {
   return (
-    <Card className="rounded-2xl overflow-hidden">
+    <Card className={twMerge("rounded-2xl overflow-hidden", className)}>
       <CardHeader className="gap-0">
-        <CardTitle className="text-base">{title}</CardTitle>
+        {title && <CardTitle className="text-base">{title}</CardTitle>}
         {description && <CardDescription>{description}</CardDescription>}
       </CardHeader>
 
@@ -28,7 +30,7 @@ export function SetupStepCard({ title, steps, image, imageAlt, description }: Se
       </CardContent>
       {image ? (
         <div className="mx-6 overflow-hidden w-fit rounded-xl border">
-          <Image src={image} alt={imageAlt ?? title} className=" object-cover" priority={false} />
+          <Image src={image} alt={imageAlt ?? title ?? ""} className=" object-cover" priority={false} />
         </div>
       ) : null}
     </Card>

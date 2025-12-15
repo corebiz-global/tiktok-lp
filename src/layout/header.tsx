@@ -6,7 +6,7 @@ import { ThemeToggle } from "./components/theme-toggle";
 
 export function Header() {
   return (
-    <header className="h-16 w-full bg-neutral-900   shadow fixed top-0 right-0 z">
+    <header className="h-16 w-full bg-neutral-900 z-10  shadow fixed top-0 right-0 z">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6">
         <div className="flex items-center">
           <Link href="/">

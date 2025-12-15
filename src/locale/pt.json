@@ -1,6 +1,40 @@
 {
   "language-pt": "Português",
   "language-en": "Inglês",
+  "commons": {
+    "continue": "Continuar",
+    "back": "Voltar"
+  },
+  "hero": {
+    "title": "Conector Corebiz: integre sua loja VTEX ao TikTok Shop em poucos passos",
+    "description": "Expanda seu alcance e venda mais no TikTok. Esta página garante que você tenha tudo pronto antes de começar a configuração do conector."
+  },
+  "preRequisites": {
+    "content": {
+      "title": "Antes de começar (Pré-requisitos essenciais)",
+      "description": "Certifique-se de ter o seguinte antes de iniciar a integração."
+    },
+    "items": {
+      "vtexAccount": {
+        "title": "Conta VTEX ativa",
+        "label": "Account VTEX",
+        "placeholder": "Digite o account da sua loja VTEX",
+        "description": "Tenha produtos, estoque e política comercial configurados (pode ser apenas a política principal). Sua conta VTEX deve estar configurada como marketplace."
+      },
+      "tiktokSeller": {
+        "title": "Conta Seller no TikTok Shop",
+        "description": "Crie sua conta de vendedor no TikTok Shop para iniciar a integração.",
+        "cta": "Criar conta seller"
+      }
+    },
+    "alert": {
+      "title": "Importante",
+      "description": "Atualmente, o conector Corebiz funciona apenas com a conta principal VTEX. Para cenários com subcontas, é necessária uma análise específica."
+    },
+    "footer": {
+      "text": "Se você já tem tudo acima, você está pronta para o passo."
+    }
+  },
   "criarContaSeller": {
     "hero": {
       "badge": "Tutorial • TikTok Shop",
@@ -9,12 +43,12 @@
       "cta": "Criar conta no TikTok Shop"
     },
     "step1": {
-      "title": "Passo 1 — Criar a conta de vendedor",
+      "title": "Criar a conta de vendedor",
       "description": "Acesse o Seller Center e inicie o processo de cadastro.",
       "intro": {
         "before": "Ao iniciar o cadastro, lembre-se de selecionar corretamente o ",
         "highlight": "país de venda",
-        "after": ". Você pode criar sua conta utilizando:"
+        "after": " Você pode criar sua conta utilizando:"
       },
       "accountOptions": [
         "Conta TikTok",
@@ -37,32 +71,6 @@
         ]
       }
     },
-    "step2": {
-      "title": "Passo 2 — Criar marcas no TikTok Shop",
-      "description": "Etapa obrigatória antes da integração do catálogo.",
-      "paragraphs": {
-        "first": "Antes de iniciar a integração do catálogo, é fundamental criar as marcas dos produtos. Essa etapa evita bloqueios ou erros durante o processamento.",
-        "second": "Além disso, a autorização da marca comprova que o vendedor possui permissão para comercializar produtos no TikTok Shop."
-      },
-      "steps": [
-        "Acessar o ícone de casinha no menu superior",
-        "Minha conta",
-        "Configurações de conta",
-        "Centro de qualificação",
-        "Qualificação de marca",
-        "Adicionar autorização de marca",
-        "Incluir o tipo de autorização e o documento necessário"
-      ],
-      "imageAlt": "Tela de configuração de marcas no TikTok Shop",
-      "alert": {
-        "title": "Nome da marca",
-        "description": "Será necessário realizar a vinculação da marca no mapeamento de marcas do app na VTEX. Por isso, salve exatamente a mesma nomenclatura utilizada na VTEX. Atenção a variações de escrita (maiúsculas/minúsculas), pois a correspondência deve ser idêntica."
-      },
-      "footer": {
-        "before": "Para mais informações, consulte a",
-        "link": "documentação oficial de marcas do TikTok"
-      }
-    },
     "links": {
       "title": "Links úteis — TikTok Shop",
       "description": "Documentações e políticas oficiais para apoiar sua configuração e operação.",
@@ -74,79 +82,6 @@
         "adsPolicy": "Políticas de anúncios",
         "policyCenter": "Central de políticas",
         "partnerDocs": "TikTok Shop Partner — Documentações"
-      }
-    }
-  },
-  "preRequisites": {
-    "guide": {
-      "title": "Seu guia de integração",
-      "description": "O passo a passo para configurar e começar a vender.",
-      "steps": {
-        "step1": {
-          "title": "Antes de começar",
-          "description": "Pré-requisitos essenciais."
-        },
-        "step2": {
-          "title": "Conexão",
-          "description": "Autorizações e credenciais."
-        },
-        "step3": {
-          "title": "Sincronização",
-          "description": "Catálogo, preço, estoque e pedidos."
-        }
-      },
-      "cta": "Continuar"
-    },
-    "content": {
-      "title": "Antes de começar (Pré-requisitos essenciais)",
-      "description": "Certifique-se de ter o seguinte antes de iniciar a integração."
-    },
-    "items": {
-      "vtexAccount": {
-        "title": "Conta VTEX ativa",
-        "description": "Tenha produtos, estoque e política comercial configurados (pode ser apenas a política principal). Sua conta VTEX deve estar configurada como marketplace."
-      },
-      "tiktokSeller": {
-        "title": "Conta Seller no TikTok Shop",
-        "description": "Crie sua conta de vendedor no TikTok Shop para iniciar a integração.",
-        "cta": "Criar conta seller"
-      }
-    },
-    "alert": {
-      "title": "Importante",
-      "description": "Atualmente, o conector Corebiz funciona apenas com a conta principal VTEX. Para cenários com subcontas, é necessária uma análise específica."
-    },
-    "footer": {
-      "text": "Se você já tem tudo acima, você está pronta para o passo.",
-      "cta": "Continuar"
-    }
-  },
-  "hero": {
-    "title": "Conector Corebiz: integre sua loja VTEX ao TikTok Shop em poucos passos",
-    "description": "Expanda seu alcance e venda mais no TikTok. Esta página garante que você tenha tudo pronto antes de começar a configuração do conector — sem surpresas no meio do caminho.",
-    "cta": {
-      "prerequisites": "Ver pré-requisitos",
-      "guide": "Ir para o guia"
-    },
-    "benefits": {
-      "title": "Por que integrar com o Conector Corebiz?",
-      "items": {
-        "globalReach": {
-          "title": "Alcance Global",
-          "description": "Leve seus produtos para um público massivo e engajado no TikTok."
-        },
-        "fullSync": {
-          "title": "Sincronização Total",
-          "description": "Catálogo, estoque, preços e pedidos atualizados automaticamente entre VTEX e TikTok Shop."
-        },
-        "simplifiedManagement": {
-          "title": "Gestão Simplificada",
-          "description": "Gerencie tudo a partir do painel VTEX, com TikTok Shop configurado como marketplace."
-        },
-        "smoothExperience": {
-          "title": "Experiência Fluida",
-          "description": "Processo de conexão otimizado para sellers e consumidores."
-        }
       }
     }
   },
@@ -175,7 +110,8 @@
       ]
     },
     "brands": {
-      "title": "Passo 3 - Crie e autorize suas marcas no TikTok Shop",
+      "title": "Crie e autorize suas marcas no TikTok Shop",
+      "description": "Antes de iniciar a integração do catálogo, é fundamental criar as marcas dos produtos. Essa etapa evita bloqueios ou erros durante o processamento.  Além disso, a autorização da marca comprova que o vendedor possui permissão para comercializar produtos no TikTok Shop.",
       "steps": [
         "No Seller Center, clique no ícone de casinha (Home) no menu superior",
         "Vá para \"Minha conta\" > \"Configurações de conta\"",
