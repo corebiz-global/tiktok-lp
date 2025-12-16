@@ -1,9 +1,24 @@
 {
   "language-pt": "Português",
   "language-en": "Inglês",
+  "header": {
+    "nav": {
+      "home": "Início",
+      "docs": "Documentação"
+    }
+  },
   "commons": {
     "continue": "Continuar",
-    "back": "Voltar"
+    "back": "Voltar",
+    "info": "Informação",
+    "attention": "Atenção",
+    "steps": "Passo a passo",
+    "tiktok": {
+      "badge": "Tutorial • TikTok Shop"
+    },
+    "vtex": {
+      "badge": "Tutorial • VTEX"
+    }
   },
   "hero": {
     "title": "Conector Corebiz: integre sua loja VTEX ao TikTok Shop em poucos passos",
@@ -135,16 +150,17 @@
   },
   "appKeys": {
     "trigger": "1. Gerar App Key e App Token",
-    "steps": [
-      "Acesse o <strong>VTEX Admin</strong>.",
-      "Clique no avatar do seu perfil (canto superior direito).",
-      "Vá em <strong>Configurações da conta</strong> → <strong>Chaves do aplicativo</strong>.",
-      "Clique em <strong>Gerenciar minhas chaves</strong>.",
-      "Clique em <strong>+ Gerar chave</strong>.",
-      "Preencha o <strong>Rótulo</strong> (ex: <em>Integração TikTok Shop</em>).",
-      "Em <strong>Perfil de acesso</strong>, selecione <strong>Owner (Admin Super)</strong>.",
-      "Clique em <strong>Gerar</strong>."
-    ],
+    "steps": {
+      "admin": "Acesse o VTEX Admin.",
+      "profile": "Clique no avatar do seu perfil (canto superior direito).",
+      "settings": "Vá em Configurações da conta → Chaves do aplicativo.",
+      "manage": "Clique em Gerenciar minhas chaves.",
+      "generate": "Clique em + Gerar chave.",
+      "label": "Preencha o rótulo",
+      "labelExample": "Integração TikTok Shop",
+      "role": "Em Perfil de acesso, selecione Owner (Admin Super).",
+      "confirm": "Clique em Gerar."
+    },
     "alert": {
       "title": "Importante",
       "description": "O App Token será exibido apenas uma vez. Copie-o imediatamente e armazene em um local seguro. Caso o token seja perdido, será necessário gerar uma nova chave."
@@ -181,12 +197,127 @@
     "trigger": "3. Instalar o Conector Corebiz",
     "steps": {
       "apps": "No menu lateral do VTEX Admin, vá em Aplicativos.",
-      "search": "Procure por Corebiz - TikTok Shop Connector.",
+      "search": "Procure por Corebiz - TikTok Shop Connector ou acesse: ",
       "install": "Instale o aplicativo."
     },
     "alert": {
       "title": "Atenção",
       "description": "O conector só funcionará se sua loja estiver autorizada pela Corebiz. Será necessário contato com o time comercial. Este aplicativo não é gratuito."
+    }
+  },
+  "mapeamentoDeCampos": {
+    "title": "Mapeamento de Campos",
+    "description": "Agora que você configurou sua conta VTEX e instalou o conector Corebiz, é hora de mapear os campos essenciais para garantir que seus produtos sejam sincronizados corretamente com o TikTok Shop.",
+    "access": {
+      "title": "Acesso ao Conector",
+      "description": "Todas as configurações e mapeamentos são realizados diretamente no painel do conector Corebiz dentro do VTEX Admin.",
+      "linkLabel": "Acessar painel do conector Corebiz"
+    },
+    "credentials": {
+      "title": "Configuração das Credenciais",
+      "access": {
+        "title": "Acesso às configurações do conector",
+        "description": "As configurações são realizadas diretamente no painel do conector dentro do VTEX Admin ou acesse: ",
+        "linkLabel": "Acessar configurações do conector Corebiz",
+        "linkHelper": "Você será redirecionado para o VTEX Admin. É necessário estar logado."
+      },
+      "intro": "Na aba de configurações, todos os campos devem ser preenchidos e o aplicativo deve estar ativo para que a integração funcione corretamente.",
+      "activation": {
+        "title": "Ativação do Aplicativo",
+        "toggle": "Ative o toggle de ativação do aplicativo."
+      },
+      "vtexConfig": {
+        "title": "Configuração VTEX",
+        "fields": {
+          "affiliate": {
+            "label": "Afiliado",
+            "description": "nome do afiliado (ex: TikTok Shop)."
+          },
+          "endpoint": {
+            "label": "Endpoint de notificação",
+            "description": "mesmo endpoint configurado no afiliado."
+          },
+          "email": {
+            "label": "E-mail",
+            "description": "utilizado para notificações."
+          },
+          "policy": {
+            "label": "Política comercial",
+            "description": "mesma política configurada no afiliado."
+          },
+          "salesChannel": {
+            "label": "Canal de vendas",
+            "description": "Seller VTEX."
+          },
+          "key": {
+            "label": "VTEX Key",
+            "description": "App Key gerada para o TikTok."
+          },
+          "token": {
+            "label": "VTEX Token",
+            "description": "App Token gerada para o TikTok."
+          }
+        }
+      },
+      "tiktokConfig": {
+        "title": "Configuração TikTok",
+        "shopId": {
+          "label": "ShopId",
+          "description": "número de identificação da sua loja no TikTok Shop."
+        },
+        "helper": "Caso não consiga visualizar o ShopId no seu perfil de vendedor, entre em contato com o TikTok ou com a equipe Corebiz."
+      },
+      "catalogConfig": {
+        "title": "Configuração de Catálogo",
+        "variation": {
+          "label": "Atributos de variação",
+          "description": "insira os nomes dos atributos separados por vírgula (ex: Tamanho, Cor, Estampa)."
+        },
+        "limit": "O TikTok aceita no máximo 3 variações por produto."
+      }
+    },
+    "brandMapping": {
+      "title": "Mapeamento de Marcas",
+      "access": {
+        "title": "Acesso ao mapeamento de marcas",
+        "description": "No painel do conector na VTEX, acesse a seção de Mapeamento de Marcas ou acesse: ",
+        "helper": "Você deve substituir {{account}} pelo account da sua loja VTEX, caso ainda não esteja configurado."
+      },
+      "steps": {
+        "list": "Será exibida a listagem das suas marcas cadastradas na VTEX.",
+        "select": "Para cada marca, selecione a marca correspondente no TikTok Shop.",
+        "auth": "As marcas disponíveis no TikTok são aquelas que já possuem autorização aprovada.",
+        "save": "Após preencher todas as marcas, clique em Salvar."
+      },
+      "rules": {
+        "block": "A integração do catálogo só será permitida após a conclusão do mapeamento de marcas.",
+        "limit": "A versão atual do aplicativo oferece suporte para a conexão de até 999 marcas."
+      }
+    },
+    "categoryMapping": {
+      "title": "Mapeamento de Categorias",
+      "access": {
+        "title": "Acesso ao mapeamento de categorias"
+      },
+      "steps": {
+        "tree": "Será exibida uma lista com a árvore de categorias da VTEX.",
+        "select": "Selecione as categorias da VTEX uma a uma.",
+        "match": "Para cada categoria selecionada, escolha a categoria correspondente no TikTok Shop.",
+        "confirm": "Verifique se a categoria selecionada no TikTok corresponde ao valor exibido acima do seletor.",
+        "save": "Após cada mapeamento de categoria, clique em Salvar alterações."
+      }
+    },
+    "logisticsMapping": {
+      "title": "Mapeamento de Logística",
+      "access": {
+        "title": "Acesso ao mapeamento de logística",
+        "description": "No painel do conector na VTEX, acesse a seção de Mapeamento de Logística ou acesse: "
+      },
+      "steps": {
+        "select": "Selecione o armazém padrão que será utilizado na integração do catálogo (ex: TikTok Shop).",
+        "context": "Este armazém será a base para estoque e logística dos produtos integrados.",
+        "save": "Clique em Salvar para registrar o mapeamento de logística."
+      }
     }
   }
 }

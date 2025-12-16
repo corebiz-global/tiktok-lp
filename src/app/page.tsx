@@ -14,10 +14,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { HeaderSection } from "@/components/shared/header-section";
+import { VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
 
 export default function Home() {
   const { t } = useTranslation();
-  const { set, get } = useLocalStorage<string>("vtexAccount");
+  const { set, get } = useLocalStorage<string>(VTEX_ACCOUNT_STORAGE_KEY);
 
   const [accountValue, setAccountValue] = useState("");
 

@@ -6,7 +6,6 @@ import { SetupStepCard } from "@/components/shared/setup-step-card";
 
 import installImage from "../../../public/assets/images/install-app-vtex-sync-tts.png";
 import tokenImage from "../../../public/assets/images/gerar-token.png";
-import { Badge } from "@/components/ui/badge";
 import { StepNavigation } from "@/components/shared/step-navigation";
 import { HeaderSection } from "@/components/shared/header-section";
 
@@ -18,10 +17,11 @@ export default function TikTokShopSetup() {
 
   return (
     <section className="space-y-6">
-      <Badge variant="secondary" className="rounded-full">
-        {t("criarContaSeller.hero.badge")}
-      </Badge>
-      <HeaderSection title={t("tiktokSetup.title")} description={t("tiktokSetup.description")} />
+      <HeaderSection
+        title={t("tiktokSetup.title")}
+        description={t("tiktokSetup.description")}
+        badge={t("commons.tiktok.badge")}
+      />
       <div className="grid gap-6 md:grid-cols-2">
         <SetupStepCard
           title={t("tiktokSetup.install.title")}

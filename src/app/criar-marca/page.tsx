@@ -1,7 +1,6 @@
 "use client";
 import { useTranslation } from "react-i18next";
 
-import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { InfoIcon } from "lucide-react";
 import Image from "next/image";
@@ -17,11 +16,11 @@ export default function CriarMarca() {
 
   return (
     <section className="space-y-6 pb-7">
-      <Badge variant="secondary" className="rounded-full">
-        {t("criarContaSeller.hero.badge")}
-      </Badge>
-
-      <HeaderSection title={t("tiktokSetup.brands.title")} description={t("tiktokSetup.brands.description")} />
+      <HeaderSection
+        title={t("tiktokSetup.brands.title")}
+        description={t("tiktokSetup.brands.description")}
+        badge={t("commons.tiktok.badge")}
+      />
 
       <Card className="rounded-2xl overflow-hidden">
         <CardContent className="space-y-4 text-sm text-muted-foreground">

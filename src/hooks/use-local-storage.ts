@@ -13,7 +13,6 @@ export function useLocalStorage<T = string>(key: string) {
 
       return JSON.parse(value) as T;
     } catch {
-      // fallback para string simples
       return window.localStorage.getItem(key) as T;
     }
   }, [key]);

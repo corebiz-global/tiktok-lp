@@ -1,9 +1,21 @@
 {
   "language-pt": "Portuguese",
   "language-en": "English",
+  "header": {
+    "nav": {
+      "home": "Home",
+      "docs": "Documentation"
+    }
+  },
   "commons": {
     "continue": "Continue",
-    "back": "Back"
+    "back": "Back",
+    "tiktok": {
+      "badge": "Tutorial • TikTok Shop"
+    },
+    "vtex": {
+      "badge": "Tutorial • VTEX"
+    }
   },
   "hero": {
     "title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
@@ -135,16 +147,17 @@
   },
   "appKeys": {
     "trigger": "1. Generate App Key and App Token",
-    "steps": [
-      "Access the <strong>VTEX Admin</strong>.",
-      "Click on your profile avatar (top right corner).",
-      "Go to <strong>Account settings</strong> → <strong>Application keys</strong>.",
-      "Click on <strong>Manage my keys</strong>.",
-      "Click on <strong>+ Generate key</strong>.",
-      "Fill in the <strong>Label</strong> (e.g. <em>TikTok Shop Integration</em>).",
-      "Under <strong>Access profile</strong>, select <strong>Owner (Super Admin)</strong>.",
-      "Click <strong>Generate</strong>."
-    ],
+    "steps": {
+      "admin": "Access the VTEX Admin.",
+      "profile": "Click on your profile avatar (top right corner).",
+      "settings": "Go to Account settings → Application keys.",
+      "manage": "Click Manage my keys.",
+      "generate": "Click + Generate key.",
+      "label": "Fill in the label",
+      "labelExample": "TikTok Shop Integration",
+      "role": "Under Access profile, select Owner (Super Admin).",
+      "confirm": "Click Generate."
+    },
     "alert": {
       "title": "Important",
       "description": "The App Token will be displayed only once. Copy it immediately and store it in a secure place. If the token is lost, a new key will need to be generated."
@@ -181,12 +194,127 @@
     "trigger": "3. Install the Corebiz Connector",
     "steps": {
       "apps": "In the VTEX Admin side menu, go to Apps.",
-      "search": "Search for Corebiz - TikTok Shop Connector.",
+      "search": "Search for Corebiz - TikTok Shop Connector or access: ",
       "install": "Install the app."
     },
     "alert": {
       "title": "Attention",
       "description": "The connector will only work if your store is authorized by Corebiz. You will need to contact the sales team. This app is not free."
+    }
+  },
+  "mapeamentoDeCampos": {
+    "title": "Field Mapping",
+    "description": "Now that you have configured your VTEX account and installed the Corebiz connector, it’s time to map the essential fields to ensure your products are correctly synchronized with TikTok Shop.",
+    "access": {
+      "title": "Connector Access",
+      "description": "All configurations and mappings are performed directly in the Corebiz connector panel within the VTEX Admin.",
+      "linkLabel": "Access the Corebiz connector panel"
+    },
+    "credentials": {
+      "title": "Credentials Configuration",
+      "access": {
+        "title": "Access connector settings",
+        "description": "The settings are configured directly in the connector panel within the VTEX Admin or access:",
+        "linkLabel": "Access Corebiz connector settings",
+        "linkHelper": "You will be redirected to the VTEX Admin. You must be logged in."
+      },
+      "intro": "On the settings tab, all fields must be filled in and the application must be active for the integration to work properly.",
+      "activation": {
+        "title": "Application Activation",
+        "toggle": "Enable the application activation toggle."
+      },
+      "vtexConfig": {
+        "title": "VTEX Configuration",
+        "fields": {
+          "affiliate": {
+            "label": "Affiliate",
+            "description": "affiliate name (e.g. TikTok Shop)."
+          },
+          "endpoint": {
+            "label": "Notification endpoint",
+            "description": "same endpoint configured for the affiliate."
+          },
+          "email": {
+            "label": "Email",
+            "description": "used for notifications."
+          },
+          "policy": {
+            "label": "Trade policy",
+            "description": "same policy configured for the affiliate."
+          },
+          "salesChannel": {
+            "label": "Sales channel",
+            "description": "VTEX Seller."
+          },
+          "key": {
+            "label": "VTEX Key",
+            "description": "App Key generated for TikTok."
+          },
+          "token": {
+            "label": "VTEX Token",
+            "description": "App Token generated for TikTok."
+          }
+        }
+      },
+      "tiktokConfig": {
+        "title": "TikTok Configuration",
+        "shopId": {
+          "label": "ShopId",
+          "description": "identification number of your TikTok Shop store."
+        },
+        "helper": "If you cannot find the ShopId in your seller profile, contact TikTok or the Corebiz team."
+      },
+      "catalogConfig": {
+        "title": "Catalog Configuration",
+        "variation": {
+          "label": "Variation attributes",
+          "description": "enter the attribute names separated by commas (e.g. Size, Color, Print)."
+        },
+        "limit": "TikTok supports a maximum of 3 variations per product."
+      }
+    },
+    "brandMapping": {
+      "title": "Brand Mapping",
+      "access": {
+        "title": "Access brand mapping",
+        "description": "In the VTEX connector panel, access the Brand Mapping section or access:",
+        "helper": "Replace {{account}} with your VTEX store account if it is not yet configured."
+      },
+      "steps": {
+        "list": "A list of your VTEX brands will be displayed.",
+        "select": "For each brand, select the corresponding TikTok Shop brand.",
+        "auth": "Only brands that already have approved authorization on TikTok will be available.",
+        "save": "After filling in all brands, click Save."
+      },
+      "rules": {
+        "block": "Catalog integration will only be allowed after completing the brand mapping.",
+        "limit": "The current version of the application supports up to 999 brands."
+      }
+    },
+    "categoryMapping": {
+      "title": "Category Mapping",
+      "access": {
+        "title": "Access category mapping"
+      },
+      "steps": {
+        "tree": "A list with the VTEX category tree will be displayed.",
+        "select": "Select VTEX categories one by one.",
+        "match": "For each selected category, choose the corresponding TikTok Shop category.",
+        "confirm": "Verify that the selected TikTok category matches the value shown above the selector.",
+        "save": "After each category mapping, click Save changes."
+      }
+    },
+    "logisticsMapping": {
+      "title": "Logistics Mapping",
+      "access": {
+        "title": "Access logistics mapping",
+        "description": "In the VTEX connector panel, access the Logistics Mapping section or access:"
+      },
+      "steps": {
+        "select": "Select the default warehouse to be used for catalog integration (e.g. TikTok Shop).",
+        "context": "This warehouse will be the basis for stock and logistics of the integrated products.",
+        "save": "Click Save to register the logistics mapping."
+      }
     }
   }
 }

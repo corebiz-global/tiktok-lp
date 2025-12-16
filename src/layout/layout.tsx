@@ -10,7 +10,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      <main className="py-10 px-6 max-w-6xl mx-auto mt-16">{children}</main>
+      <main className="py-10 px-6 max-w-6xl mx-auto my-16 ">{children}</main>
     </>
   );
 }

@@ -7,6 +7,7 @@ export default function Docs() {
     { title: "Setup TikTok", href: "/tiktok-setup", tag: "tiktok" },
     { title: "Criar Marca", href: "/criar-marca", tag: "tiktok" },
     { title: "Configurar Conector na Vtex", href: "/configurar-conector-vtex", tag: "vtex" },
+    { title: "Mapeamento de Campos", href: "/mapeamento-de-campos", tag: "vtex" },
   ];
 
   return (
