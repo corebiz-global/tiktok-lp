@@ -1,17 +1,53 @@
 {
+  "language-pt": "Portuguese",
+  "language-en": "English",
+  "commons": {
+    "continue": "Continue",
+    "back": "Back"
+  },
+  "hero": {
+    "title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
+    "description": "Expand your reach and sell more on TikTok. This page ensures you have everything ready before starting the connector setup."
+  },
+  "preRequisites": {
+    "content": {
+      "title": "Before you start (Essential prerequisites)",
+      "description": "Make sure you have the following before starting the integration."
+    },
+    "items": {
+      "vtexAccount": {
+        "title": "Active VTEX account",
+        "label": "VTEX Account",
+        "placeholder": "Enter your VTEX store account",
+        "description": "Have products, inventory, and a commercial policy configured (it can be just the main policy). Your VTEX account must be configured as a marketplace."
+      },
+      "tiktokSeller": {
+        "title": "TikTok Shop Seller account",
+        "description": "Create your TikTok Shop seller account to start the integration.",
+        "cta": "Create seller account"
+      }
+    },
+    "alert": {
+      "title": "Important",
+      "description": "Currently, the Corebiz connector works only with the main VTEX account. For subaccount scenarios, a specific analysis is required."
+    },
+    "footer": {
+      "text": "If you already have everything above, you are ready for the next step."
+    }
+  },
   "criarContaSeller": {
     "hero": {
       "badge": "Tutorial • TikTok Shop",
-      "title": "Create a TikTok Shop Seller Account",
-      "description": "Creating a seller account is the first step to list your products on TikTok Shop. With it, you can manage products, orders, shipping, and payments.",
-      "cta": "Create TikTok Shop Account"
+      "title": "Create a TikTok Shop Seller account",
+      "description": "Creating a seller account is the first step to making your products available on TikTok Shop. With it, you will be able to manage products, orders, deliveries, and payments.",
+      "cta": "Create a TikTok Shop account"
     },
     "step1": {
-      "title": "Step 1 — Create a seller account",
+      "title": "Create the seller account",
       "description": "Access the Seller Center and start the registration process.",
       "intro": {
         "before": "When starting the registration, remember to correctly select the ",
-        "highlight": "sales country",
+        "highlight": "country of sale",
         "after": ". You can create your account using:"
       },
       "accountOptions": [
@@ -23,42 +59,16 @@
       "documents": {
         "title": "Required documentation for registration",
         "items": [
-          "Legal representative’s identification document",
-          "Verification selfies holding the ID next to the face (photo visible)",
+          "Legal representative identification document",
+          "Verification selfies holding the document next to the face (photo visible)",
           "Company document",
-          "Full legal business name",
-          "Company registration number",
+          "Full legal company name",
+          "Company registration number (CNPJ)",
           "Company opening date",
           "Registered business address",
           "Bank account",
           "Tax information"
         ]
-      }
-    },
-    "step2": {
-      "title": "Step 2 — Create brands on TikTok Shop",
-      "description": "Mandatory step before catalog integration.",
-      "paragraphs": {
-        "first": "Before starting the catalog integration, it is essential to create product brands. This step prevents blocks or errors during processing.",
-        "second": "In addition, brand authorization proves that the seller has permission to sell products on TikTok Shop."
-      },
-      "steps": [
-        "Access the home icon in the top menu",
-        "My account",
-        "Account settings",
-        "Qualification center",
-        "Brand qualification",
-        "Add brand authorization",
-        "Include the authorization type and required document"
-      ],
-      "imageAlt": "TikTok Shop brand configuration screen",
-      "alert": {
-        "title": "Brand name",
-        "description": "It will be necessary to link the brand in the VTEX app brand mapping. Therefore, save exactly the same name used in VTEX. Pay attention to spelling variations (uppercase/lowercase), as the match must be identical."
-      },
-      "footer": {
-        "before": "For more information, see the",
-        "link": "official TikTok brand documentation"
       }
     },
     "links": {
@@ -70,81 +80,8 @@
         "accountRights": "Rights and rules for the official TikTok Shop account",
         "contentPolicy": "Content policy",
         "adsPolicy": "Advertising policies",
-        "policyCenter": "Policy center",
+        "policyCenter": "Policy Center",
         "partnerDocs": "TikTok Shop Partner — Documentation"
-      }
-    }
-  },
-  "preRequisites": {
-    "guide": {
-      "title": "Your integration guide",
-      "description": "Step by step to configure and start selling.",
-      "steps": {
-        "step1": {
-          "title": "Before you start",
-          "description": "Essential prerequisites."
-        },
-        "step2": {
-          "title": "Connection",
-          "description": "Authorizations and credentials."
-        },
-        "step3": {
-          "title": "Synchronization",
-          "description": "Catalog, pricing, inventory, and orders."
-        }
-      },
-      "cta": "Continue"
-    },
-    "content": {
-      "title": "Before you start (Essential prerequisites)",
-      "description": "Make sure you have the following before starting the integration."
-    },
-    "items": {
-      "vtexAccount": {
-        "title": "Active VTEX account",
-        "description": "Have products, inventory, and commercial policy configured (the main policy is sufficient). Your VTEX account must be configured as a marketplace."
-      },
-      "tiktokSeller": {
-        "title": "TikTok Shop Seller account",
-        "description": "Create your seller account on TikTok Shop to start the integration.",
-        "cta": "Create seller account"
-      }
-    },
-    "alert": {
-      "title": "Important",
-      "description": "Currently, the Corebiz connector works only with the main VTEX account. For sub-account scenarios, a specific analysis is required."
-    },
-    "footer": {
-      "text": "If you already have everything above, you are ready for the next step.",
-      "cta": "Continue"
-    }
-  },
-  "hero": {
-    "title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
-    "description": "Expand your reach and sell more on TikTok. This page ensures you have everything ready before starting the connector setup — no surprises along the way.",
-    "cta": {
-      "prerequisites": "View prerequisites",
-      "guide": "Go to the guide"
-    },
-    "benefits": {
-      "title": "Why integrate with the Corebiz Connector?",
-      "items": {
-        "globalReach": {
-          "title": "Global reach",
-          "description": "Take your products to a massive and highly engaged audience on TikTok."
-        },
-        "fullSync": {
-          "title": "Full synchronization",
-          "description": "Catalog, inventory, prices, and orders automatically synced between VTEX and TikTok Shop."
-        },
-        "simplifiedManagement": {
-          "title": "Simplified management",
-          "description": "Manage everything from the VTEX dashboard, with TikTok Shop configured as a marketplace."
-        },
-        "smoothExperience": {
-          "title": "Smooth experience",
-          "description": "Optimized connection flow for sellers and consumers."
-        }
       }
     }
   },
@@ -152,43 +89,104 @@
     "title": "TikTok Shop setup",
     "description": "Let’s prepare your TikTok Shop environment for the integration.",
     "install": {
-      "title": "Install the Corebiz Connector on TikTok Shop",
+      "title": "Step 1 - Install the Corebiz Connector on TikTok Shop",
       "steps": [
         "Access your TikTok Shop Seller Center",
-        "Navigate to \"Apps and agencies\" in the main menu",
+        "Navigate to \"Apps & Partners\" in the main menu",
         "Click on \"App Store\"",
         "Filter by \"Popular platforms\" with the value \"VTEX\"",
-        "Select the \"VTEX Sync by Corebiz\" application",
-        "Click \"Install\" and follow the instructions"
+        "Select the app \"VTEX Sync by Corebiz\"",
+        "Click \"Install\" and follow the indicated steps"
       ]
     },
     "token": {
-      "title": "Generate the permission token",
+      "title": "Step 2 - Generate the permission token",
       "steps": [
-        "After installation, return to the \"App Store\" section",
-        "Locate the \"VTEX Sync by Corebiz\" application",
-        "Click the three dots (...) icon next to the app",
+        "After installation, access the \"App Store\" section again",
+        "Locate the app \"VTEX Sync by Corebiz\"",
+        "Click the three dots icon (...) next to the app",
         "Go to \"My apps and incidents\"",
         "Find \"VTEX Sync\" and click \"Authorize\""
       ]
     },
     "brands": {
       "title": "Create and authorize your brands on TikTok Shop",
+      "description": "Before starting the catalog integration, it is essential to create your product brands. This step prevents blocks or errors during processing. In addition, brand authorization proves that the seller is allowed to sell products on TikTok Shop.",
       "steps": [
         "In the Seller Center, click the home icon in the top menu",
         "Go to \"My account\" > \"Account settings\"",
-        "Access \"Qualification center\" > \"Brand qualification\"",
+        "Access \"Qualification Center\" > \"Brand qualification\"",
         "Click \"Add brand authorization\"",
-        "Include the authorization type and required document"
+        "Include the authorization type and the required document"
       ]
     },
     "tip": {
       "title": "Important tip",
-      "description": "Make sure the brand name on TikTok Shop matches exactly the one used in VTEX. This is essential for correct mapping and to avoid product blocks."
+      "description": "Make sure the brand naming in TikTok Shop is exactly the same as used in VTEX. This is essential for correct mapping and to avoid product blocks."
     },
     "footer": {
       "before": "For more details, see the",
       "link": "official TikTok Shop brand documentation"
+    }
+  },
+  "configurarConectorVtex": {
+    "title": "VTEX Admin Configuration",
+    "description": "In this step, you will configure your VTEX account to allow integration with TikTok Shop through the Corebiz connector."
+  },
+  "appKeys": {
+    "trigger": "1. Generate App Key and App Token",
+    "steps": [
+      "Access the <strong>VTEX Admin</strong>.",
+      "Click on your profile avatar (top right corner).",
+      "Go to <strong>Account settings</strong> → <strong>Application keys</strong>.",
+      "Click on <strong>Manage my keys</strong>.",
+      "Click on <strong>+ Generate key</strong>.",
+      "Fill in the <strong>Label</strong> (e.g. <em>TikTok Shop Integration</em>).",
+      "Under <strong>Access profile</strong>, select <strong>Owner (Super Admin)</strong>.",
+      "Click <strong>Generate</strong>."
+    ],
+    "alert": {
+      "title": "Important",
+      "description": "The App Token will be displayed only once. Copy it immediately and store it in a secure place. If the token is lost, a new key will need to be generated."
+    }
+  },
+  "afiliado": {
+    "trigger": "2. Configure Affiliate (Marketplace)",
+    "steps": {
+      "admin": "In the VTEX Admin, go to Store Settings → Orders → Settings.",
+      "tab": "Access the Affiliates tab.",
+      "new": "Click New Affiliate.",
+      "fields": "Fill in the fields:",
+      "save": "Click Save."
+    },
+    "fields": {
+      "name": "Name",
+      "id": "ID",
+      "policy": "Trade policy",
+      "email": "Email",
+      "endpoint": "Search endpoint",
+      "searchEndpoint": "Search Endpoint",
+      "paymentMethod": "Use payment method"
+    },
+    "values": {
+      "name": "TikTok Shop",
+      "id": "TTS",
+      "policy": "policy number",
+      "email": "your email",
+      "searchEndpoint": "l.xx",
+      "paymentMethod": "unchecked"
+    }
+  },
+  "installation": {
+    "trigger": "3. Install the Corebiz Connector",
+    "steps": {
+      "apps": "In the VTEX Admin side menu, go to Apps.",
+      "search": "Search for Corebiz - TikTok Shop Connector.",
+      "install": "Install the app."
+    },
+    "alert": {
+      "title": "Attention",
+      "description": "The connector will only work if your store is authorized by Corebiz. You will need to contact the sales team. This app is not free."
     }
   }
 }

@@ -16,14 +16,6 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { HeaderSection } from "@/components/shared/header-section";
 
 export default function Home() {
-  // // Função que faz o scroll suave para o topo
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  // };
-
   const { t } = useTranslation();
   const { set, get } = useLocalStorage<string>("vtexAccount");
 

@@ -128,5 +128,65 @@
       "before": "Para mais detalhes, consulte a",
       "link": "documentação oficial de marcas do TikTok Shop"
     }
+  },
+  "configurarConectorVtex": {
+    "title": "Configuração no VTEX Admin",
+    "description": "Nesta etapa, você irá configurar sua conta VTEX para permitir a integração com o TikTok Shop por meio do conector Corebiz."
+  },
+  "appKeys": {
+    "trigger": "1. Gerar App Key e App Token",
+    "steps": [
+      "Acesse o <strong>VTEX Admin</strong>.",
+      "Clique no avatar do seu perfil (canto superior direito).",
+      "Vá em <strong>Configurações da conta</strong> → <strong>Chaves do aplicativo</strong>.",
+      "Clique em <strong>Gerenciar minhas chaves</strong>.",
+      "Clique em <strong>+ Gerar chave</strong>.",
+      "Preencha o <strong>Rótulo</strong> (ex: <em>Integração TikTok Shop</em>).",
+      "Em <strong>Perfil de acesso</strong>, selecione <strong>Owner (Admin Super)</strong>.",
+      "Clique em <strong>Gerar</strong>."
+    ],
+    "alert": {
+      "title": "Importante",
+      "description": "O App Token será exibido apenas uma vez. Copie-o imediatamente e armazene em um local seguro. Caso o token seja perdido, será necessário gerar uma nova chave."
+    }
+  },
+  "afiliado": {
+    "trigger": "2. Configurar Afiliado (Marketplace)",
+    "steps": {
+      "admin": "No VTEX Admin, vá em Configurações da Loja → Pedidos → Configurações.",
+      "tab": "Acesse a aba Afiliados.",
+      "new": "Clique em Novo Afiliado.",
+      "fields": "Preencha os campos:",
+      "save": "Clique em Salvar."
+    },
+    "fields": {
+      "name": "Nome",
+      "id": "ID",
+      "policy": "Política comercial",
+      "email": "E-mail",
+      "endpoint": "Endpoint de busca",
+      "searchEndpoint": "Search Endpoint",
+      "paymentMethod": "Usar método de pagamento"
+    },
+    "values": {
+      "name": "TikTok Shop",
+      "id": "TTS",
+      "policy": "número da política",
+      "email": "seu e-mail",
+      "searchEndpoint": "l.xx",
+      "paymentMethod": "desmarcado"
+    }
+  },
+  "installation": {
+    "trigger": "3. Instalar o Conector Corebiz",
+    "steps": {
+      "apps": "No menu lateral do VTEX Admin, vá em Aplicativos.",
+      "search": "Procure por Corebiz - TikTok Shop Connector.",
+      "install": "Instale o aplicativo."
+    },
+    "alert": {
+      "title": "Atenção",
+      "description": "O conector só funcionará se sua loja estiver autorizada pela Corebiz. Será necessário contato com o time comercial. Este aplicativo não é gratuito."
+    }
   }
 }

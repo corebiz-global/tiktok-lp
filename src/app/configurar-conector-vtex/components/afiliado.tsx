@@ -3,57 +3,65 @@ import {
   CustomAccordionItem,
   CustomAccordionTrigger,
 } from "@/components/shared/custom-accordion";
+import { useLocalStorage } from "@/hooks/use-local-storage";
+import { useTranslation } from "react-i18next";
 
 export function Afiliado() {
+  const { t } = useTranslation();
+  const { get } = useLocalStorage<string>("vtexAccount");
+
+  const account = get() || "{{account}}";
+
   return (
     <CustomAccordionItem value="afiliado">
-      <CustomAccordionTrigger>2. Configurar Afiliado (Marketplace)</CustomAccordionTrigger>
+      <CustomAccordionTrigger>{t("afiliado.trigger")}</CustomAccordionTrigger>
 
       <CustomAccordionContent>
-        {" "}
         <ol className="list-decimal space-y-2 pl-5">
+          <li>{t("afiliado.steps.admin")}</li>
+
+          <li>{t("afiliado.steps.tab")}</li>
+
+          <li>{t("afiliado.steps.new")}</li>
+
           <li>
-            No VTEX Admin, vá em <strong>Configurações da Loja</strong> → <strong>Pedidos</strong> →{" "}
-            <strong>Configurações</strong>.
-          </li>
-          <li>
-            Acesse a aba <strong>Afiliados</strong>.
-          </li>
-          <li>
-            Clique em <strong>Novo Afiliado</strong>.
-          </li>
-          <li>
-            Preencha os campos:
+            {t("afiliado.steps.fields")}
+
             <ul className="mt-2 list-disc space-y-1 pl-5">
               <li>
-                <strong>Nome:</strong> TikTok Shop
+                <strong>{t("afiliado.fields.name")}:</strong> {t("afiliado.values.name")}
               </li>
+
               <li>
-                <strong>ID:</strong> TTS
+                <strong>{t("afiliado.fields.id")}:</strong> {t("afiliado.values.id")}
               </li>
+
               <li>
-                <strong>Política comercial:</strong> número da política
+                <strong>{t("afiliado.fields.policy")}:</strong> {t("afiliado.values.policy")}
               </li>
+
               <li>
-                <strong>E-mail:</strong> seu e-mail
+                <strong>{t("afiliado.fields.email")}:</strong> {t("afiliado.values.email")}
               </li>
+
               <li>
-                <strong>Endpoint de busca:</strong>
+                <strong>{t("afiliado.fields.endpoint")}:</strong>
                 <code className="mt-1 block rounded bg-muted px-2 py-1">
-                  https://&#123;&#123;account&#125;&#125;.myvtex.com/corebiz.tiktok-connector/vtex
+                  https://{account}.myvtex.com/corebiz.tiktok-connector/vtex
                 </code>
               </li>
+
               <li>
-                <strong>Search Endpoint:</strong> l.xx
+                <strong>{t("afiliado.fields.searchEndpoint")}:</strong> {t("afiliado.values.searchEndpoint")}
               </li>
+
               <li>
-                <strong>Usar método de pagamento:</strong> desmarcado
+                <strong>{t("afiliado.fields.paymentMethod")}:</strong> {t("afiliado.values.paymentMethod")}
               </li>
             </ul>
           </li>
-          <li>
-            Clique em <strong>Salvar</strong>.
-          </li>
+
+          <li>{t("afiliado.steps.save")}</li>
         </ol>
       </CustomAccordionContent>
     </CustomAccordionItem>

@@ -1,18 +1,18 @@
 "use client";
+import { useTranslation } from "react-i18next";
 
-import { AppKeys } from "./components/app-keys";
-import { HeaderSection } from "@/components/shared/header-section";
 import { CustomAccordion } from "@/components/shared/custom-accordion";
+import { HeaderSection } from "@/components/shared/header-section";
+import { AppKeys } from "./components/app-keys";
 import { Afiliado } from "./components/afiliado";
 import { Installation } from "./components/installation";
 
 export default function ConfigurarConectorVtex() {
+  const { t } = useTranslation();
+
   return (
-    <section className="space-y-4 ">
-      <HeaderSection
-        title="Configuração no VTEX Admin"
-        description="Nesta etapa, você irá configurar sua conta VTEX para permitir a integração com o TikTok Shop por meio do conector Corebiz."
-      />
+    <section className="space-y-4">
+      <HeaderSection title={t("configurarConectorVtex.title")} description={t("configurarConectorVtex.description")} />
 
       <CustomAccordion type="single" collapsible className="space-y-4">
         <AppKeys />
