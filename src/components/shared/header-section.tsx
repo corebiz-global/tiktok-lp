@@ -9,7 +9,7 @@ type HeaderSectionProps = {
 
 export function HeaderSection({ title, description, badge }: HeaderSectionProps) {
   return (
-    <div>
+    <>
       <div className="space-y-4">
         {badge && (
           <Badge variant="secondary" className="rounded-full">
@@ -20,6 +20,6 @@ export function HeaderSection({ title, description, badge }: HeaderSectionProps)
         <p className="text-base text-muted-foreground md:text-lg">{description}</p>
       </div>
       <Separator className="my-7" />
-    </div>
+    </>
   );
 }

@@ -37,7 +37,7 @@ export default function TikTokShopSetup() {
           imageAlt={t("tiktokSetup.token.title")}
         />
       </div>
-      <StepNavigation backHref="/" continueHref="/criar-marca" />
+      <StepNavigation backHref="/" continueHref="/criar-marca-tiktok" />
     </section>
   );
 }

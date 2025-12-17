@@ -15,7 +15,7 @@ export default function CriarMarca() {
   const brandSteps = t("tiktokSetup.brands.steps", { returnObjects: true }) as string[];
 
   return (
-    <section className="space-y-6 pb-7">
+    <section className="space-y-6">
       <HeaderSection
         title={t("tiktokSetup.brands.title")}
         description={t("tiktokSetup.brands.description")}

@@ -1,4 +1,4 @@
-/* eslint-disable no-undef */
+
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";

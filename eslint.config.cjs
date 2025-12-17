@@ -42,6 +42,8 @@ module.exports = [
         }
       ],
 
+      "no-undef": "off",
+
       "no-multiple-empty-lines": [
         "error",
         {

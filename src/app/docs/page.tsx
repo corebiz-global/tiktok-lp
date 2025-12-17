@@ -3,10 +3,11 @@ import Link from "next/link";
 export default function Docs() {
   const pages = [
     { title: "Pré Requisitos", href: "/", tag: "" },
-    { title: "Criar conta seller", href: "/criar-conta-seller-tiktok", tag: "tiktok" },
+    { title: "Criar conta seller no TikTok", href: "/criar-conta-seller-tiktok", tag: "tiktok" },
     { title: "Setup TikTok", href: "/tiktok-setup", tag: "tiktok" },
-    { title: "Criar Marca", href: "/criar-marca", tag: "tiktok" },
+    { title: "Criar Marca no Tiktok", href: "/criar-marca-tiktok", tag: "tiktok" },
     { title: "Configurar Conector na Vtex", href: "/configurar-conector-vtex", tag: "vtex" },
+    { title: "Configurar Credenciais na Vtex", href: "/configurar-credenciais-vtex", tag: "vtex" },
     { title: "Mapeamento de Campos", href: "/mapeamento-de-campos", tag: "vtex" },
   ];
 

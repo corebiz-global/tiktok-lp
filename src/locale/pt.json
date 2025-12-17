@@ -213,69 +213,6 @@
       "description": "Todas as configurações e mapeamentos são realizados diretamente no painel do conector Corebiz dentro do VTEX Admin.",
       "linkLabel": "Acessar painel do conector Corebiz"
     },
-    "credentials": {
-      "title": "Configuração das Credenciais",
-      "access": {
-        "title": "Acesso às configurações do conector",
-        "description": "As configurações são realizadas diretamente no painel do conector dentro do VTEX Admin ou acesse: ",
-        "linkLabel": "Acessar configurações do conector Corebiz",
-        "linkHelper": "Você será redirecionado para o VTEX Admin. É necessário estar logado."
-      },
-      "intro": "Na aba de configurações, todos os campos devem ser preenchidos e o aplicativo deve estar ativo para que a integração funcione corretamente.",
-      "activation": {
-        "title": "Ativação do Aplicativo",
-        "toggle": "Ative o toggle de ativação do aplicativo."
-      },
-      "vtexConfig": {
-        "title": "Configuração VTEX",
-        "fields": {
-          "affiliate": {
-            "label": "Afiliado",
-            "description": "nome do afiliado (ex: TikTok Shop)."
-          },
-          "endpoint": {
-            "label": "Endpoint de notificação",
-            "description": "mesmo endpoint configurado no afiliado."
-          },
-          "email": {
-            "label": "E-mail",
-            "description": "utilizado para notificações."
-          },
-          "policy": {
-            "label": "Política comercial",
-            "description": "mesma política configurada no afiliado."
-          },
-          "salesChannel": {
-            "label": "Canal de vendas",
-            "description": "Seller VTEX."
-          },
-          "key": {
-            "label": "VTEX Key",
-            "description": "App Key gerada para o TikTok."
-          },
-          "token": {
-            "label": "VTEX Token",
-            "description": "App Token gerada para o TikTok."
-          }
-        }
-      },
-      "tiktokConfig": {
-        "title": "Configuração TikTok",
-        "shopId": {
-          "label": "ShopId",
-          "description": "número de identificação da sua loja no TikTok Shop."
-        },
-        "helper": "Caso não consiga visualizar o ShopId no seu perfil de vendedor, entre em contato com o TikTok ou com a equipe Corebiz."
-      },
-      "catalogConfig": {
-        "title": "Configuração de Catálogo",
-        "variation": {
-          "label": "Atributos de variação",
-          "description": "insira os nomes dos atributos separados por vírgula (ex: Tamanho, Cor, Estampa)."
-        },
-        "limit": "O TikTok aceita no máximo 3 variações por produto."
-      }
-    },
     "brandMapping": {
       "title": "Mapeamento de Marcas",
       "access": {
@@ -318,6 +255,70 @@
         "context": "Este armazém será a base para estoque e logística dos produtos integrados.",
         "save": "Clique em Salvar para registrar o mapeamento de logística."
       }
+    }
+  },
+  "configCredenciasVtex": {
+    "title": "Configuração das Credenciais",
+    "description": "Agora, você irá configurar as credenciais necessárias no conector Corebiz para estabelecer a comunicação entre sua loja VTEX e o TikTok Shop.",
+    "access": {
+      "title": "Acesso às configurações do conector",
+      "description": "As configurações são realizadas diretamente no painel do conector dentro do VTEX Admin ou acesse: ",
+      "linkLabel": "Acessar configurações do conector Corebiz",
+      "linkHelper": "Você será redirecionado para o VTEX Admin. É necessário estar logado."
+    },
+    "intro": "Na aba de configurações, todos os campos devem ser preenchidos e o aplicativo deve estar ativo para que a integração funcione corretamente.",
+    "activation": {
+      "title": "Ativação do Aplicativo",
+      "toggle": "Ative o toggle de ativação do aplicativo."
+    },
+    "vtexConfig": {
+      "title": "Configuração VTEX",
+      "fields": {
+        "affiliate": {
+          "label": "Afiliado",
+          "description": "nome do afiliado (ex: TikTok Shop)."
+        },
+        "endpoint": {
+          "label": "Endpoint de notificação",
+          "description": "mesmo endpoint configurado no afiliado."
+        },
+        "email": {
+          "label": "E-mail",
+          "description": "utilizado para notificações."
+        },
+        "policy": {
+          "label": "Política comercial",
+          "description": "mesma política configurada no afiliado."
+        },
+        "salesChannel": {
+          "label": "Canal de vendas",
+          "description": "Seller VTEX."
+        },
+        "key": {
+          "label": "VTEX Key",
+          "description": "App Key gerada para o TikTok."
+        },
+        "token": {
+          "label": "VTEX Token",
+          "description": "App Token gerada para o TikTok."
+        }
+      }
+    },
+    "tiktokConfig": {
+      "title": "Configuração TikTok",
+      "shopId": {
+        "label": "ShopId",
+        "description": "número de identificação da sua loja no TikTok Shop."
+      },
+      "helper": "Caso não consiga visualizar o ShopId no seu perfil de vendedor, entre em contato com o TikTok ou com a equipe Corebiz."
+    },
+    "catalogConfig": {
+      "title": "Configuração de Catálogo",
+      "variation": {
+        "label": "Atributos de variação",
+        "description": "insira os nomes dos atributos separados por vírgula (ex: Tamanho, Cor, Estampa)."
+      },
+      "limit": "O TikTok aceita no máximo 3 variações por produto."
     }
   }
 }

@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 "use client";
 
 import Link from "next/link";
@@ -14,11 +13,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { HeaderSection } from "@/components/shared/header-section";
-import { VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
+import { TIKTOK_SHOP_ID_STORAGE_KEY, VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
   const { t } = useTranslation();
   const { set, get } = useLocalStorage<string>(VTEX_ACCOUNT_STORAGE_KEY);
+  const searchParams = useSearchParams();
+  const { set: setShopId } = useLocalStorage<string>(TIKTOK_SHOP_ID_STORAGE_KEY);
 
   const [accountValue, setAccountValue] = useState("");
 
@@ -39,6 +41,14 @@ export default function Home() {
     const account = get();
     if (account) setAccountValue(account);
   }, []);
+
+  useEffect(() => {
+    const shopIdFromUrl = searchParams.get("shopId");
+
+    if (!shopIdFromUrl) return;
+
+    setShopId(shopIdFromUrl);
+  }, [searchParams, setShopId]);
 
   const isTiktokDisabled = !accountValue;
 

@@ -25,7 +25,7 @@ export default function ConfigurarConectorVtex() {
         <Afiliado />
         <Installation />
       </CustomAccordion>
-      <StepNavigation backHref="/criar-marca" continueHref="/mapeamento-de-campos" />
+      <StepNavigation backHref="/criar-marca-tiktok" continueHref="/configurar-credenciais-vtex" />
     </section>
   );
 }
