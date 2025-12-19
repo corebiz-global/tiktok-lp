@@ -7,9 +7,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { InfoIcon } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
-import { Link } from "./components/link";
 import React from "react";
 import { ShopIdInput } from "@/components/shared/shop-id-input";
+import { CustomAccountLink } from "@/components/shared/custom-account-link";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -54,7 +54,7 @@ export default function MapeamentoDeCampos() {
         </CardHeader>
 
         <CardContent className="space-y-5">
-          <Link />
+          <CustomAccountLink path="admin/corebiz/tiktok-connector" />
           <Description>{t(`${base}.intro`)}</Description>
 
           <Section title={t(`${base}.activation.title`)}>
@@ -120,7 +120,7 @@ export default function MapeamentoDeCampos() {
         </CardContent>
       </Card>
 
-      <StepNavigation backHref="/configurar-conector-vtex" continueHref="/integracao" />
+      <StepNavigation backHref="/configurar-conector-vtex" continueHref="/onboarding-completed" />
     </div>
   );
 }

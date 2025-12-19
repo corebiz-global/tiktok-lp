@@ -4,7 +4,8 @@
   "header": {
     "nav": {
       "home": "Início",
-      "docs": "Documentação"
+      "docs": "Documentação",
+      "contact": "Contato"
     }
   },
   "commons": {
@@ -12,6 +13,7 @@
     "back": "Voltar",
     "info": "Informação",
     "attention": "Atenção",
+    "start": "Começar",
     "steps": "Passo a passo",
     "tiktok": {
       "badge": "Tutorial • TikTok Shop"
@@ -189,7 +191,7 @@
       "id": "TTS",
       "policy": "número da política",
       "email": "seu e-mail",
-      "searchEndpoint": "l.xx",
+      "searchEndpoint": "1.xx",
       "paymentMethod": "desmarcado"
     }
   },
@@ -234,7 +236,8 @@
     "categoryMapping": {
       "title": "Mapeamento de Categorias",
       "access": {
-        "title": "Acesso ao mapeamento de categorias"
+        "title": "Acesso ao mapeamento de categorias",
+        "description": "No painel do conector na VTEX, acesse a seção de Mapeamento de Categorias ou acesse: "
       },
       "steps": {
         "tree": "Será exibida uma lista com a árvore de categorias da VTEX.",
@@ -319,6 +322,142 @@
         "description": "insira os nomes dos atributos separados por vírgula (ex: Tamanho, Cor, Estampa)."
       },
       "limit": "O TikTok aceita no máximo 3 variações por produto."
+    }
+  },
+  "onboardingCompleted": {
+    "title": "Configuração concluída",
+    "description": "Você finalizou todas as etapas necessárias para configurar o conector VTEX + TikTok Shop. As informações foram salvas com sucesso e o ambiente está pronto para ativação.",
+    "commercialActivation": {
+      "title": "Ativação comercial",
+      "description": "Este aplicativo é um serviço pago da Corebiz. Para utilizá-lo em produção, é necessário realizar a ativação comercial.",
+      "contactLabel": "Contato comercial:"
+    },
+    "support": {
+      "title": "Suporte",
+      "description": "Caso tenha dúvidas técnicas ou precise de apoio adicional durante o processo:",
+      "contactLabel": "Suporte técnico:"
+    },
+    "footer": "Após a ativação comercial, você poderá iniciar a sincronização de produtos, preços e estoque entre a VTEX e o TikTok Shop."
+  },
+  "integration": {
+    "title": "Integração do Catálogo",
+    "description": "Nesta etapa, você irá integrar os produtos da sua loja VTEX com o TikTok Shop, acompanhar o status das integrações e entender como funciona o gerenciamento pós-integração.",
+    "steps": {
+      "startIntegration": {
+        "title": "1. Iniciar a Integração do Catálogo",
+        "intro": "No painel do Conector TikTok Shop no VTEX Admin, acesse a seção <strong>Integração do Catálogo</strong>.",
+        "list": [
+          "Acesse o painel do conector no VTEX Admin.",
+          "Clique em <strong>Integração do Catálogo</strong>.",
+          "Escolha uma das opções de integração disponíveis.",
+          "Clique em <strong>Iniciar Integração</strong>."
+        ],
+        "optionsTitle": "Opções disponíveis:",
+        "options": {
+          "full": "<strong>Integrar todo o catálogo:</strong> recomendado para lojas com até 1.000 produtos.",
+          "collection": "<strong>Integrar por coleção:</strong> recomendado para lojas com mais de 1.000 produtos. Informe o ID da coleção que deseja integrar."
+        }
+      },
+      "limits": {
+        "title": "2. Limite de Produtos do TikTok Shop",
+        "alertTitle": "Limite diário de integração",
+        "alertDescription": "O TikTok Shop permite o envio de no máximo <strong>1.000 produtos por dia</strong>.",
+        "moreThanLimit": "Caso sua loja possua mais de 1.000 produtos:",
+        "list": [
+          "A integração deverá ser continuada no dia seguinte.",
+          "Produtos que não forem processados aparecerão no dashboard como <strong>não processados</strong>."
+        ]
+      },
+      "catalogConfig": {
+        "title": "3. Configuração de Catálogo (Variações)",
+        "description": "Durante a integração, é necessário configurar corretamente os <strong>atributos de variação</strong> dos produtos.",
+        "exampleLabel": "Insira os nomes dos atributos separados por vírgula. Exemplo:",
+        "example": "Tamanho, Cor, Estampa",
+        "alertTitle": "Limite de variações",
+        "alertDescription": "O TikTok Shop aceita no máximo <strong>3 variações por produto</strong>. Produtos que excederem esse limite podem falhar na integração."
+      },
+      "requiredAttributes": {
+        "title": "4. Atributos Obrigatórios (Composição / Ingredientes)",
+        "description": "Algumas categorias possuem campos obrigatórios exigidos pelo TikTok Shop.",
+        "example": "Exemplo: Cosméticos",
+        "list": [
+          "O campo <strong>Composição / Ingredientes</strong> é obrigatório.",
+          "Esse campo deve estar corretamente cadastrado na VTEX.",
+          "O mapeamento deve ser feito na etapa de <strong>Mapeamento de Campos</strong>."
+        ],
+        "alertTitle": "Atenção",
+        "alertDescription": "Caso o atributo obrigatório não esteja preenchido ou mapeado, o produto será rejeitado pelo TikTok e aparecerá com erro no dashboard."
+      },
+      "fashion": {
+        "title": "5. Tabela de Medidas",
+        "description": "Para produtos da categoria <strong>Moda</strong>, o TikTok exige o envio da <strong>tabela de medidas</strong>.",
+        "upload": "O upload da tabela pode ser realizado na aba <strong>Mapeamento de Campos</strong> do conector.",
+        "pathLabel": "Caminho no VTEX Admin:",
+        "path": "VTEX Admin > Corebiz > TikTok Connector > Mapeamento de Campos",
+        "alertTitle": "Obrigatório",
+        "alertDescription": "A ausência da tabela de medidas pode causar falha ou bloqueio da integração do produto no TikTok Shop."
+      },
+      "dashboard": {
+        "title": "6. Dashboard de Integração",
+        "description": "Após iniciar a integração, você poderá acompanhar todo o processo através do <strong>Dashboard do Conector</strong>.",
+        "listIntro": "No dashboard, é possível visualizar:",
+        "list": [
+          "Total de produtos",
+          "Produtos já existentes no TikTok",
+          "Produtos integrados com sucesso",
+          "Produtos com erro",
+          "Produtos não processados",
+          "Motivo detalhado dos erros"
+        ]
+      },
+      "postIntegration": {
+        "title": "7. Gerenciamento Pós-Integração",
+        "intro": "Após a integração do catálogo, alguns fluxos passam a ser automáticos.",
+        "stockPrice": {
+          "title": "Sincronização de estoque e preço",
+          "list": [
+            "Atualizações de estoque e preço bruto são enviadas automaticamente.",
+            "Certifique-se de que a política comercial configurada no conector seja a mesma usada na VTEX."
+          ]
+        },
+        "shippingLabels": {
+          "title": "Etiquetas de envio",
+          "list": [
+            "Geradas automaticamente pelo TikTok após o pedido.",
+            "Disponíveis no pedido dentro da VTEX.",
+            "O link da etiqueta possui validade aproximada de 2 dias."
+          ]
+        },
+        "freeSamples": {
+          "title": "Amostras grátis (Creators)",
+          "list": [
+            "O envio do código de rastreio é manual.",
+            "Pedidos entram na VTEX com valor de R$ 0,01."
+          ]
+        },
+        "returns": {
+          "title": "Troca e devolução",
+          "description": "As políticas de troca e devolução devem ser consultadas diretamente na documentação oficial do TikTok Shop."
+        }
+      }
+    }
+  },
+  "contacts": {
+    "title": "Contatos Importantes",
+    "description": "Aqui estão os contatos essenciais para suporte técnico e comercial relacionados ao conector Corebiz VTEX + TikTok Shop."
+  },
+  "docs": {
+    "title": "Documentação",
+    "description": "Guias passo a passo para instalação, configuração e uso do conector.",
+    "pages": {
+      "prerequisites": "Pré-requisitos",
+      "createSeller": "Criar conta seller no TikTok",
+      "tiktokSetup": "Setup TikTok",
+      "createBrand": "Criar marca no TikTok",
+      "configureConnector": "Configurar conector na VTEX",
+      "configureCredentials": "Configurar credenciais na VTEX",
+      "fieldMapping": "Mapeamento de campos",
+      "catalogIntegration": "Integração do catálogo"
     }
   }
 }

@@ -1,15 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Check, Copy, InfoIcon } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { TIKTOK_SHOP_ID_STORAGE_KEY } from "@/constants";
-import { Alert, AlertDescription } from "../ui/alert";
 import { useTranslation } from "react-i18next";
-
 export function ShopIdInput() {
   const { t } = useTranslation();
   const { get } = useLocalStorage<string>(TIKTOK_SHOP_ID_STORAGE_KEY);
@@ -33,21 +31,12 @@ export function ShopIdInput() {
 
   if (!shopId) return null;
 
-  return shopId ? (
-    <div className="inline-flex items-stretch">
+  return (
+    <div className="flex items-stretch max-w-full">
       <Input
         value={shopId}
         readOnly
-        className="
-          w-[220px]
-          rounded-r-none
-          rounded-l-lg
-          bg-secondary/10
-          font-mono
-          text-sm
-          border-r-0
-          border-neutral-300
-        "
+        className=" w-full max-w-80 min-w-0 rounded-r-none rounded-l-lg bg-secondary/10 font-mono text-sm border-r-0 border-neutral-300 truncate"
       />
 
       <Button
@@ -55,20 +44,10 @@ export function ShopIdInput() {
         variant="outline"
         size="icon"
         onClick={handleCopy}
-        className="
-          rounded-l-none
-          rounded-r-lg
-          border
-             border-neutral-300
-        "
+        className=" shrink-0 rounded-l-none rounded-r-lg border border-neutral-300 dark:border-neutral-300"
       >
         {copied ? <Check className="h-4 w-4 text-primary" /> : <Copy className="h-4 w-4 text-muted-foreground" />}
       </Button>
     </div>
-  ) : (
-    <Alert className="mt-3 rounded-xl">
-      <InfoIcon className="h-4 w-4" />
-      <AlertDescription>{t(`configCredenciasVtex.tiktokConfig.helper`)}</AlertDescription>
-    </Alert>
   );
 }

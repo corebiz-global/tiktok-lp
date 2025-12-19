@@ -1,23 +1,28 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Docs() {
+  const { t } = useTranslation();
+
   const pages = [
-    { title: "Pré Requisitos", href: "/", tag: "" },
-    { title: "Criar conta seller no TikTok", href: "/criar-conta-seller-tiktok", tag: "tiktok" },
-    { title: "Setup TikTok", href: "/tiktok-setup", tag: "tiktok" },
-    { title: "Criar Marca no Tiktok", href: "/criar-marca-tiktok", tag: "tiktok" },
-    { title: "Configurar Conector na Vtex", href: "/configurar-conector-vtex", tag: "vtex" },
-    { title: "Configurar Credenciais na Vtex", href: "/configurar-credenciais-vtex", tag: "vtex" },
-    { title: "Mapeamento de Campos", href: "/mapeamento-de-campos", tag: "vtex" },
+    { title: t("docs.pages.prerequisites"), href: "/", tag: "" },
+    { title: t("docs.pages.createSeller"), href: "/criar-conta-seller-tiktok", tag: "tiktok" },
+    { title: t("docs.pages.tiktokSetup"), href: "/tiktok-setup", tag: "tiktok" },
+    { title: t("docs.pages.createBrand"), href: "/criar-marca-tiktok", tag: "tiktok" },
+    { title: t("docs.pages.configureConnector"), href: "/configurar-conector-vtex", tag: "vtex" },
+    { title: t("docs.pages.configureCredentials"), href: "/configurar-credenciais-vtex", tag: "vtex" },
+    { title: t("docs.pages.fieldMapping"), href: "/mapeamento-de-campos", tag: "vtex" },
+    { title: t("docs.pages.catalogIntegration"), href: "/integracao-do-catalogo", tag: "vtex" },
   ];
 
   return (
     <div className="space-y-8 pb-28">
       <header className="space-y-2">
-        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">Documentação</h1>
-        <p className="text-muted-foreground max-w-2xl">
-          Guias passo a passo para instalação, configuração e uso do conector.
-        </p>
+        <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">{t("docs.title")}</h1>
+
+        <p className="text-muted-foreground max-w-2xl">{t("docs.description")}</p>
       </header>
 
       <ul className="grid gap-4 sm:grid-cols-2">
@@ -39,10 +44,10 @@ export default function Docs() {
                 {page.tag && (
                   <span
                     className="
-                    shrink-0 rounded-full border bg-muted px-2.5 py-0.5
-                    text-[10px] font-semibold uppercase tracking-wide
-                    text-muted-foreground
-                  "
+                      shrink-0 rounded-full border bg-muted px-2.5 py-0.5
+                      text-[10px] font-semibold uppercase tracking-wide
+                      text-muted-foreground
+                    "
                   >
                     {page.tag}
                   </span>

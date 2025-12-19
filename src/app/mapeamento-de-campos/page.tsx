@@ -3,10 +3,8 @@ import { useTranslation } from "react-i18next";
 
 import { HeaderSection } from "@/components/shared/header-section";
 import { CustomAccordion } from "@/components/shared/custom-accordion";
-import { StepNavigation } from "@/components/shared/step-navigation";
 import { useHash } from "@/hooks/use-hash";
 
-import { CredentialsConfig } from "./components/credentials-config";
 import { BrandMapping } from "./components/brand-mapping";
 import { CategoryMapping } from "./components/category-mapping";
 import { LogisticsMapping } from "./components/logistics-mapping";
@@ -24,13 +22,10 @@ export default function MapeamentoDeCampos() {
       />
 
       <CustomAccordion type="single" collapsible className="space-y-4" value={hash} onValueChange={handleHashChange}>
-        <CredentialsConfig />
         <BrandMapping />
         <CategoryMapping />
         <LogisticsMapping />
       </CustomAccordion>
-
-      <StepNavigation backHref="/configurar-conector-vtex" continueHref="/integracao" />
     </section>
   );
 }

@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 type StepNavigationProps = {
   backHref?: string;
-  continueHref: string;
+  continueHref?: string;
   continueDisabled?: boolean;
   className?: string;
 };
@@ -25,9 +25,11 @@ export function StepNavigation({ backHref, continueHref, continueDisabled = fals
           </Button>
         )}
 
-        <Button className="rounded-2xl" disabled={continueDisabled} asChild>
-          <Link href={continueHref}>{t("commons.continue")}</Link>
-        </Button>
+        {continueHref && (
+          <Button className="rounded-2xl" disabled={continueDisabled} asChild>
+            <Link href={continueHref}>{t("commons.continue")}</Link>
+          </Button>
+        )}
       </div>
     </div>
   );
