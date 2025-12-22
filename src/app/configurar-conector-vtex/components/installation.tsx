@@ -8,7 +8,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { InfoIcon } from "lucide-react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import installImage from "../../../../public/assets/images/install-app-vtex.png";
 
 export function Installation() {
   const { t } = useTranslation();
@@ -18,7 +20,7 @@ export function Installation() {
   return (
     <CustomAccordionItem value="instalacao" id="instalacao">
       <CustomAccordionTrigger>{t("installation.trigger")}</CustomAccordionTrigger>
-      <CustomAccordionContent>
+      <CustomAccordionContent className="space-y-5">
         <ol className="list-decimal space-y-2 pl-5">
           <li>{t("installation.steps.apps")}</li>
           <li>
@@ -27,11 +29,12 @@ export function Installation() {
           </li>
           <li>{t("installation.steps.install")}</li>
         </ol>
-        <Alert className="mt-4 rounded-xl">
+        <Alert className="rounded-xl">
           <InfoIcon className="h-4 w-4" />
           <AlertTitle>{t("installation.alert.title")}</AlertTitle>
           <AlertDescription>{t("installation.alert.description")}</AlertDescription>
         </Alert>
+        <Image src={installImage} alt="Instalação VTEX" />
       </CustomAccordionContent>
     </CustomAccordionItem>
   );

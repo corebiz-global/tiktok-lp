@@ -171,7 +171,7 @@
   "afiliado": {
     "trigger": "2. Configure Affiliate (Marketplace)",
     "steps": {
-      "admin": "In the VTEX Admin, go to Store Settings → Orders → Settings.",
+      "admin": "In the VTEX Admin, go to Store Settings → Orders → Settings or access: ",
       "tab": "Access the Affiliates tab.",
       "new": "Click New Affiliate.",
       "fields": "Fill in the fields:",

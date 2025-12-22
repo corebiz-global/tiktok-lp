@@ -3,22 +3,23 @@ import {
   CustomAccordionItem,
   CustomAccordionTrigger,
 } from "@/components/shared/custom-accordion";
-import { CustomCode } from "@/components/shared/custom-code";
-import { VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
-import { useLocalStorage } from "@/hooks/use-local-storage";
+import { CustomAccountLink } from "@/components/shared/custom-account-link";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
+import afiliadoImage from "../../../../public/assets/images/novo-afiliado.png";
 
 export function Afiliado() {
   const { t } = useTranslation();
-  const { get } = useLocalStorage<string>(VTEX_ACCOUNT_STORAGE_KEY);
-  const account = get() || "{{account}}";
 
   return (
     <CustomAccordionItem value="afiliado" id="afiliado">
       <CustomAccordionTrigger>{t("afiliado.trigger")}</CustomAccordionTrigger>
-      <CustomAccordionContent>
+      <CustomAccordionContent className="flex md:flex-row flex-col gap-4">
         <ol className="list-decimal space-y-2 pl-5">
-          <li>{t("afiliado.steps.admin")}</li>
+          <li>
+            {t("afiliado.steps.admin")}
+            <CustomAccountLink path="admin/checkout#/affiliates/new" />
+          </li>
           <li>{t("afiliado.steps.tab")}</li>
           <li>{t("afiliado.steps.new")}</li>
           <li>
@@ -38,7 +39,7 @@ export function Afiliado() {
               </li>
               <li>
                 <strong>{t("afiliado.fields.endpoint")}: </strong>
-                <CustomCode code={`https://${account}.myvtex.com/corebiz.tiktok-connector/vtex`} />
+                <CustomAccountLink path="corebiz.tiktok-connector/vtex" />
               </li>
               <li>
                 <strong>{t("afiliado.fields.searchEndpoint")}:</strong> {t("afiliado.values.searchEndpoint")}
@@ -50,6 +51,7 @@ export function Afiliado() {
           </li>
           <li>{t("afiliado.steps.save")}</li>
         </ol>
+        <Image src={afiliadoImage} alt="Afiliado VTEX" className="h-full max-h-[440px] object-contain" />
       </CustomAccordionContent>
     </CustomAccordionItem>
   );
