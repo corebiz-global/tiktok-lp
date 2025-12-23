@@ -11,6 +11,9 @@ import { MandatoryAttributes } from "./components/mandatory-attributes";
 import { SizeChart } from "./components/size-chart";
 import { Dashboard } from "./components/dashboard";
 import { PostIntegration } from "./components/post-integration";
+import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
+import { InfoIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function Integration() {
   const { t } = useTranslation();
@@ -18,6 +21,18 @@ export default function Integration() {
   return (
     <section className="space-y-6 pb-28">
       <HeaderSection title={t("integration.title")} description={t("integration.description")} />
+
+      <Alert className="rounded-xl">
+        <InfoIcon className="h-4 w-4" />
+        <AlertTitle>{t("integration.mappingReminder.title")}</AlertTitle>
+        <AlertDescription>
+          {t("integration.mappingReminder.description")}
+
+          <Link href="/mapeamento-de-campos" className="mt-2 inline-block underline text-primary">
+            {t("integration.mappingReminder.link")}
+          </Link>
+        </AlertDescription>
+      </Alert>
 
       <CustomAccordion type="single" collapsible defaultValue="start-integration" className="space-y-4">
         <StartIntegration />

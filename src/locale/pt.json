@@ -337,11 +337,17 @@
       "description": "Caso tenha dúvidas técnicas ou precise de apoio adicional durante o processo:",
       "contactLabel": "Suporte técnico:"
     },
-    "footer": "Após a ativação comercial, você poderá iniciar a sincronização de produtos, preços e estoque entre a VTEX e o TikTok Shop."
+    "footer": "Após a ativação comercial, você poderá iniciar a sincronização de produtos, preços e estoque entre a VTEX e o TikTok Shop.",
+    "startIntegration": "Para mais informações, acesse: Iniciar integração do catálogo"
   },
   "integration": {
     "title": "Integração do Catálogo",
     "description": "Nesta etapa, você irá integrar os produtos da sua loja VTEX com o TikTok Shop, acompanhar o status das integrações e entender como funciona o gerenciamento pós-integração.",
+    "mappingReminder": {
+      "title": "Mapeamento de campos obrigatório",
+      "description": "Para que a integração funcione corretamente, é necessário realizar o mapeamento de campos no conector, garantindo que os atributos exigidos pelo TikTok Shop estejam corretamente associados aos campos da VTEX.",
+      "link": "Para mais informações, acesse: Mapeamento de Campos"
+    },
     "steps": {
       "startIntegration": {
         "title": "1. Iniciar a Integração do Catálogo",
@@ -374,28 +380,36 @@
         "exampleLabel": "Insira os nomes dos atributos separados por vírgula. Exemplo:",
         "example": "Tamanho, Cor, Estampa",
         "alertTitle": "Limite de variações",
-        "alertDescription": "O TikTok Shop aceita no máximo <strong>3 variações por produto</strong>. Produtos que excederem esse limite podem falhar na integração."
+        "alertDescription": "O TikTok Shop aceita no máximo <strong>3 variações por produto</strong>. Produtos que excederem esse limite, terá a variação ignorada na integração."
       },
       "requiredAttributes": {
         "title": "4. Atributos Obrigatórios (Composição / Ingredientes)",
-        "description": "Algumas categorias possuem campos obrigatórios exigidos pelo TikTok Shop.",
+        "description": "Algumas categorias exigem o envio de informações de composição ou ingredientes para o TikTok Shop.",
         "example": "Exemplo: Cosméticos",
         "list": [
-          "O campo <strong>Composição / Ingredientes</strong> é obrigatório.",
-          "Esse campo deve estar corretamente cadastrado na VTEX.",
-          "O mapeamento deve ser feito na etapa de <strong>Mapeamento de Campos</strong>."
+          "O campo <strong>TikTok Composição</strong> é obrigatório para determinadas categorias.",
+          "Esse campo deve ser criado como uma <strong>especificação de SKU</strong> na VTEX, associada à categoria do produto.",
+          "O valor da composição ou ingredientes deve ser <strong>preenchido diretamente no SKU</strong>."
         ],
+        "howTo": {
+          "title": "Como configurar o campo TikTok Composição",
+          "steps": [
+            "No VTEX Admin, acesse <strong>Catálogo > Categorias</strong>.",
+            "Selecione a categoria do produto e clique em <strong>Ações > Campo (SKU)</strong>.",
+            "Clique em <strong>Novo Campo</strong> e crie a especificação com o nome exato <strong>TikTok Composição</strong>.",
+            "Salve o campo e, em seguida, acesse <strong>Catálogo > Produtos e SKUs</strong>.",
+            "Selecione o produto, vá até <strong>Especificações</strong> e preencha o campo <strong>TikTok Composição</strong>."
+          ]
+        },
         "alertTitle": "Atenção",
-        "alertDescription": "Caso o atributo obrigatório não esteja preenchido ou mapeado, o produto será rejeitado pelo TikTok e aparecerá com erro no dashboard."
+        "alertDescription": "Caso o campo <strong>TikTok Composição</strong> não exista ou não esteja preenchido, a integração enviará automaticamente o valor padrão <strong>\"Informações indisponíveis no momento.\"</strong> para o TikTok Shop."
       },
       "fashion": {
         "title": "5. Tabela de Medidas",
-        "description": "Para produtos da categoria <strong>Moda</strong>, o TikTok exige o envio da <strong>tabela de medidas</strong>.",
+        "description": "Para produtos da categoria <strong>Moda</strong>, o TikTok aceita o envio da <strong>tabela de medidas</strong>.",
         "upload": "O upload da tabela pode ser realizado na aba <strong>Mapeamento de Campos</strong> do conector.",
         "pathLabel": "Caminho no VTEX Admin:",
-        "path": "VTEX Admin > Corebiz > TikTok Connector > Mapeamento de Campos",
-        "alertTitle": "Obrigatório",
-        "alertDescription": "A ausência da tabela de medidas pode causar falha ou bloqueio da integração do produto no TikTok Shop."
+        "path": "VTEX Admin > Corebiz > TikTok Connector > Mapeamento de Campos"
       },
       "dashboard": {
         "title": "6. Dashboard de Integração",
@@ -457,7 +471,100 @@
       "configureConnector": "Configurar conector na VTEX",
       "configureCredentials": "Configurar credenciais na VTEX",
       "fieldMapping": "Mapeamento de campos",
-      "catalogIntegration": "Integração do catálogo"
+      "catalogIntegration": "Integração do catálogo",
+      "faq": "Perguntas Frequentes"
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "description": "Dúvidas frequentes sobre configuração, pedidos, logística e catálogo na integração entre VTEX e TikTok Shop.",
+    "access": {
+      "title": "Acessos e Configurações Iniciais",
+      "appKey": {
+        "question": "Qual é o formato do AppKey e AppToken e os perfis necessários?",
+        "answer": "Deve possuir permissão <strong>Owner (Admin Super) – Restricted.</strong>"
+      },
+      "integrationInfo": {
+        "question": "Quais informações são necessárias para integrar com a VTEX?",
+        "items": {
+          "tiktokToken": "Token gerado no admin do TikTok Shop",
+          "vtexKeys": "APP-KEY e APP-TOKEN da VTEX",
+          "tiktokAccountId": "ID da conta TikTok",
+          "tradePolicy": "Canal de vendas (política comercial)",
+          "orderPrefix": "Sigla de identificação do pedido"
+        }
+      },
+      "preConfig": {
+        "question": "É preciso fazer alguma pré-configuração no nosso ambiente VTEX?",
+        "answer": "Sim, é necessário configurar o marketplace na VTEX e possuir ao menos uma política comercial ativa.",
+        "link": "Ver pré-requisitos"
+      }
+    },
+    "clients": {
+      "title": "Cadastro de Clientes",
+      "customers": {
+        "question": "Os clientes do TikTok Shop são cadastrados na CL da VTEX?",
+        "answer": "Não. Os clientes originados do TikTok Shop não são incluídos na base de clientes (CL) da VTEX."
+      }
+    },
+    "commercial": {
+      "title": "Estratégia Comercial e Políticas",
+      "policy": {
+        "question": "É necessário criar uma nova política comercial para o TikTok Shop?",
+        "answer": "Não necessariamente. A criação de uma nova política comercial fica a critério do cliente."
+      }
+    },
+    "payments": {
+      "title": "Meios de Pagamento",
+      "payment": {
+        "question": "Qual meio de pagamento aparece no pedido criado na VTEX?",
+        "answer": "O pagamento aparece como <strong>assumido pelo afiliado TikTok Shop</strong>."
+      }
+    },
+    "logistics": {
+      "title": "Envio e Logística",
+      "shippingMethod": {
+        "question": "Qual é o método de envio padrão do TikTok Shop?",
+        "answer": "O método padrão é <strong>“Enviados pela plataforma com serviços de envio padrão”</strong>, definido automaticamente pelo TikTok."
+      },
+      "carriers": {
+        "question": "Quais transportadoras estão disponíveis?",
+        "list": "J&T, Correios e Imile.",
+        "note": "Cada vendedor será atribuído a apenas uma transportadora após o primeiro pedido."
+      },
+      "deliveryStatus": {
+        "question": "Como saberei que o pedido foi entregue?",
+        "alertTitle": "Status de entrega",
+        "alertDescription": "A confirmação de entrega não é exibida na VTEX. O último status visível será o de pedido faturado."
+      }
+    },
+    "products": {
+      "title": "Sincronização e Fluxos Especiais",
+      "sync": {
+        "question": "Como funciona a sincronização de produtos entre VTEX e TikTok Shop?",
+        "paragraphs": {
+          "intro": "A integração entre VTEX e TikTok Shop garante que as informações de <strong>estoque</strong> e <strong>preço bruto</strong> (preço sem descontos) estejam sempre atualizadas entre as plataformas.",
+          "updateFlow": "Sempre que houver uma alteração no estoque ou no preço bruto de um produto na VTEX, essa modificação será automaticamente enviada ao TikTok Shop, evitando a venda de itens com preço desatualizado ou indisponíveis em estoque.",
+          "realtime": "A sincronização ocorre de forma <strong>automática e em tempo real</strong>, desde que o produto esteja devidamente publicado e vinculado entre as plataformas."
+        },
+        "alert": {
+          "title": "Observação importante",
+          "description": "A sincronização de estoque e preço considera a <strong>política comercial configurada no painel do conector</strong>. Certifique-se de que a política utilizada na VTEX para exibir preços e controlar estoque seja a mesma configurada para sincronização com o TikTok Shop."
+        }
+      },
+      "samples": {
+        "question": "Como funciona o envio de amostras grátis para creators?",
+        "paragraphs": {
+          "flow": "O envio de amostras grátis possui um fluxo diferente do envio padrão de pedidos no TikTok Shop e é realizado de forma mais manual.",
+          "tracking": "Atualmente, o TikTok possui limitações quanto às transportadoras compatíveis para esse tipo de envio. Por isso, é necessário gerar e inserir o <strong>código de rastreio manualmente</strong> na VTEX, seja diretamente no pedido ou via ERP.",
+          "automation": "Para facilitar esse processo, foi criada uma automação no conector para que o código de rastreio informado na VTEX seja enviado automaticamente ao TikTok Shop.",
+          "value": "Os pedidos de amostras grátis entram na VTEX com o valor de <strong>R$ 0,01</strong>, pois o sistema não permite faturar pedidos com valor <strong>R$ 0,00</strong>."
+        },
+        "alert": {
+          "title": "Importante",
+          "description": "Como a entrega das amostras grátis não é de responsabilidade do TikTok Shop, <strong>a etiqueta de envio não é emitida pelo TikTok</strong>."
+        }
+      }
     }
   }
 }

@@ -52,5 +52,5 @@ export function CustomAccordionTrigger({ className, children, ...props }: Custom
 type CustomAccordionContentProps = React.ComponentProps<typeof AccordionContent>;
 
 export function CustomAccordionContent({ className, ...props }: CustomAccordionContentProps) {
-  return <AccordionContent {...props} className={twMerge("px-6 pb-6 pt-4 text-sm text-muted-foreground", className)} />;
+  return <AccordionContent {...props} className={twMerge("px-6 pb-6 text-sm text-muted-foreground", className)} />;
 }

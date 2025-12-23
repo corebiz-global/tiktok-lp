@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Separator } from "@/components/ui/separator";
 import { StepNavigation } from "@/components/shared/step-navigation";
 import { Contacts } from "@/components/shared/contacts";
+import Link from "next/link";
 
 export default function OnboardingCompleted() {
   const { t } = useTranslation();
@@ -23,6 +24,9 @@ export default function OnboardingCompleted() {
       <Separator />
       <Contacts />
       <p className="text-sm text-muted-foreground">{t("onboardingCompleted.footer")}</p>
+      <Link href="/integracao-do-catalogo" className="underline text-muted-foreground text-sm">
+        {t("onboardingCompleted.startIntegration")}
+      </Link>
       <StepNavigation backHref="/configurar-credenciais-vtex" />
     </section>
   );

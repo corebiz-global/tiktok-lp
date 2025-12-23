@@ -336,11 +336,17 @@
       "description": "If you have technical questions or need additional assistance during the process:",
       "contactLabel": "Technical support:"
     },
-    "footer": "After commercial activation, you will be able to start syncing products, prices, and inventory between VTEX and TikTok Shop."
+    "footer": "After commercial activation, you will be able to start syncing products, prices, and inventory between VTEX and TikTok Shop.",
+    "startIntegration": "For more information, visit: Start Catalog Integration"
   },
   "integration": {
     "title": "Catalog Integration",
     "description": "At this stage, you will integrate your VTEX store products with TikTok Shop, track the integration status, and understand how post-integration management works.",
+    "mappingReminder": {
+      "title": "Field mapping required",
+      "description": "For the integration to work properly, it is necessary to configure field mapping in the connector, ensuring that the attributes required by TikTok Shop are correctly associated with VTEX fields.",
+      "link": "For more information, visit: Field Mapping"
+    },
     "steps": {
       "startIntegration": {
         "title": "1. Start Catalog Integration",
@@ -373,28 +379,36 @@
         "exampleLabel": "Enter the attribute names separated by commas. Example:",
         "example": "Size, Color, Pattern",
         "alertTitle": "Variation limit",
-        "alertDescription": "TikTok Shop supports up to <strong>3 variations per product</strong>. Products exceeding this limit may fail during integration."
+        "alertDescription": "TikTok Shop supports up to <strong>3 variations per product</strong>. Products exceeding this limit will have the variation ignored during integration."
       },
       "requiredAttributes": {
-        "title": "4. Required Attributes (Composition / Ingredients)",
-        "description": "Some categories have mandatory fields required by TikTok Shop.",
+        "title": "4. Mandatory Attributes (Composition / Ingredients)",
+        "description": "Some categories require composition or ingredient information to be sent to TikTok Shop.",
         "example": "Example: Cosmetics",
         "list": [
-          "The <strong>Composition / Ingredients</strong> field is mandatory.",
-          "This field must be properly registered in VTEX.",
-          "The mapping must be done in the <strong>Field Mapping</strong> step."
+          "The <strong>TikTok Composition</strong> field is mandatory for certain categories.",
+          "This field must be created as a <strong>SKU specification</strong> in VTEX and associated with the product category.",
+          "The composition or ingredient value must be <strong>filled directly in the SKU</strong>."
         ],
+        "howTo": {
+          "title": "How to configure the TikTok Composition field",
+          "steps": [
+            "In VTEX Admin, go to <strong>Catalog > Categories</strong>.",
+            "Select the product category and click <strong>Actions > Field (SKU)</strong>.",
+            "Click <strong>New Field</strong> and create the specification with the exact name <strong>TikTok Composition</strong>.",
+            "Save the field and then go to <strong>Catalog > Products and SKUs</strong>.",
+            "Select the product, open <strong>Specifications</strong>, and fill in the <strong>TikTok Composition</strong> field."
+          ]
+        },
         "alertTitle": "Attention",
-        "alertDescription": "If the required attribute is not filled in or mapped, the product will be rejected by TikTok and will appear with an error on the dashboard."
+        "alertDescription": "If the <strong>TikTok Composition</strong> field does not exist or is not filled, the integration will automatically send the default value <strong>\"Information currently unavailable.\"</strong> to TikTok Shop."
       },
       "fashion": {
         "title": "5. Size Chart",
-        "description": "For products in the <strong>Fashion</strong> category, TikTok requires the submission of a <strong>size chart</strong>.",
+        "description": "For products in the <strong>Fashion</strong> category, TikTok accepts the submission of a <strong>size chart</strong>.",
         "upload": "The size chart can be uploaded in the <strong>Field Mapping</strong> tab of the connector.",
         "pathLabel": "Path in VTEX Admin:",
-        "path": "VTEX Admin > Corebiz > TikTok Connector > Field Mapping",
-        "alertTitle": "Required",
-        "alertDescription": "The absence of a size chart may cause failure or blocking of the product integration on TikTok Shop."
+        "path": "VTEX Admin > Corebiz > TikTok Connector > Field Mapping"
       },
       "dashboard": {
         "title": "6. Integration Dashboard",
@@ -456,7 +470,100 @@
       "configureConnector": "Configure the VTEX connector",
       "configureCredentials": "Configure credentials on VTEX",
       "fieldMapping": "Field mapping",
-      "catalogIntegration": "Catalog integration"
+      "catalogIntegration": "Catalog integration",
+      "faq": "Frequently Asked Questions"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "description": "Frequently asked questions about configuration, orders, logistics, and catalog in the integration between VTEX and TikTok Shop.",
+    "access": {
+      "title": "Access and Initial Configuration",
+      "appKey": {
+        "question": "What is the format of the AppKey and AppToken and which permission profiles are required?",
+        "answer": "It must have <strong>Owner (Super Admin) – Restricted permission.</strong>"
+      },
+      "integrationInfo": {
+        "question": "What information is required to integrate with VTEX?",
+        "items": {
+          "tiktokToken": "Token generated in the TikTok Shop admin",
+          "vtexKeys": "VTEX APP-KEY and APP-TOKEN",
+          "tiktokAccountId": "TikTok account ID",
+          "tradePolicy": "Sales channel (trade policy)",
+          "orderPrefix": "Order identification prefix"
+        }
+      },
+      "preConfig": {
+        "question": "Is any pre-configuration required in the VTEX environment?",
+        "answer": "Yes. It is necessary to configure the marketplace in VTEX and have at least one active trade policy.",
+        "link": "View prerequisites"
+      }
+    },
+    "clients": {
+      "title": "Customer Registration",
+      "customers": {
+        "question": "Are TikTok Shop customers registered in the VTEX customer list (CL)?",
+        "answer": "No. Customers originating from TikTok Shop are not added to the VTEX customer list (CL)."
+      }
+    },
+    "commercial": {
+      "title": "Commercial Strategy and Policies",
+      "policy": {
+        "question": "Is it necessary to create a new trade policy for TikTok Shop?",
+        "answer": "Not necessarily. Creating a new trade policy is up to the merchant."
+      }
+    },
+    "payments": {
+      "title": "Payment Methods",
+      "payment": {
+        "question": "Which payment method appears on the order created in VTEX?",
+        "answer": "The payment is shown as <strong>assumed by the TikTok Shop affiliate</strong>."
+      }
+    },
+    "logistics": {
+      "title": "Shipping and Logistics",
+      "shippingMethod": {
+        "question": "What is the default shipping method on TikTok Shop?",
+        "answer": "The default method is <strong>“Shipped by the platform with standard shipping services”</strong>, automatically defined by TikTok."
+      },
+      "carriers": {
+        "question": "Which carriers are available?",
+        "list": "J&T, Correios, and Imile.",
+        "note": "Each seller will be assigned to only one carrier after the first order."
+      },
+      "deliveryStatus": {
+        "question": "How will I know when the order has been delivered?",
+        "alertTitle": "Delivery status",
+        "alertDescription": "Delivery confirmation is not displayed in VTEX. The last visible status will be the invoiced order."
+      }
+    },
+    "products": {
+      "title": "Synchronization and Special Flows",
+      "sync": {
+        "question": "How does product synchronization work between VTEX and TikTok Shop?",
+        "paragraphs": {
+          "intro": "The integration between VTEX and TikTok Shop ensures that <strong>stock</strong> and <strong>base price</strong> (price without discounts) information is always up to date across both platforms.",
+          "updateFlow": "Whenever there is a change in stock or base price of a product in VTEX, this update is automatically sent to TikTok Shop, preventing the sale of items with outdated prices or unavailable stock.",
+          "realtime": "Synchronization happens <strong>automatically and in real time</strong>, as long as the product is properly published and linked between the platforms."
+        },
+        "alert": {
+          "title": "Important note",
+          "description": "Stock and price synchronization considers the <strong>trade policy configured in the connector panel</strong>. Make sure the trade policy used in VTEX to display prices and control stock is the same one configured for synchronization with TikTok Shop."
+        }
+      },
+      "samples": {
+        "question": "How does free sample shipping for creators work?",
+        "paragraphs": {
+          "flow": "Free sample shipping follows a different flow compared to standard TikTok Shop orders and is handled in a more manual way.",
+          "tracking": "Currently, TikTok has limitations regarding compatible carriers for this type of shipment. Therefore, it is necessary to generate and manually insert the <strong>tracking code</strong> in VTEX, either directly in the order or via ERP.",
+          "automation": "To streamline this process, an automation was created in the connector so that the tracking code informed in VTEX is automatically sent to TikTok Shop.",
+          "value": "Free sample orders enter VTEX with a value of <strong>R$ 0.01</strong>, since the system does not allow invoicing orders with a value of <strong>R$ 0.00</strong>."
+        },
+        "alert": {
+          "title": "Important",
+          "description": "Since free sample delivery is not handled by TikTok Shop, <strong>the shipping label is not issued by TikTok</strong>."
+        }
+      }
     }
   }
 }
