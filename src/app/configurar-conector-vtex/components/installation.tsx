@@ -8,9 +8,9 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { VTEX_ACCOUNT_STORAGE_KEY } from "@/constants";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { InfoIcon } from "lucide-react";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import installImage from "../../../../public/assets/images/install-app-vtex.png";
+import { CustomImage } from "@/components/shared/custom-image";
 
 export function Installation() {
   const { t } = useTranslation();
@@ -34,7 +34,7 @@ export function Installation() {
           <AlertTitle>{t("installation.alert.title")}</AlertTitle>
           <AlertDescription>{t("installation.alert.description")}</AlertDescription>
         </Alert>
-        <Image src={installImage} alt="Instalação VTEX" />
+        <CustomImage src={installImage} alt="Instalação VTEX" />
       </CustomAccordionContent>
     </CustomAccordionItem>
   );

@@ -3,11 +3,11 @@ import { useTranslation } from "react-i18next";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { InfoIcon } from "lucide-react";
-import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { StepNavigation } from "@/components/shared/step-navigation";
 import minhaConta from "../../../public/assets/images/minha-conta-tiktok.png";
 import { HeaderSection } from "@/components/shared/header-section";
+import { CustomImage } from "@/components/shared/custom-image";
 
 export default function CriarMarca() {
   const { t } = useTranslation();
@@ -30,9 +30,7 @@ export default function CriarMarca() {
             ))}
           </ol>
 
-          <div className="overflow-hidden w-fit rounded-xl border">
-            <Image src={minhaConta} alt={t("tiktokSetup.brands.imageAlt")} className="object-cover" width={400} />
-          </div>
+          <CustomImage src={minhaConta} alt={t("tiktokSetup.brands.imageAlt")} width={400} />
         </CardContent>
       </Card>
       <Alert className="rounded-2xl">

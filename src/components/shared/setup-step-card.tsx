@@ -1,8 +1,9 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
+import { StaticImageData } from "next/image";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { twMerge } from "tailwind-merge";
+import { CustomImage } from "./custom-image";
 
 type SetupStepCardProps = {
   title?: string;
@@ -28,11 +29,7 @@ export function SetupStepCard({ title, steps, image, imageAlt, description, clas
           ))}
         </ol>
       </CardContent>
-      {image ? (
-        <div className="mx-6 overflow-hidden w-fit rounded-xl border">
-          <Image src={image} alt={imageAlt ?? title ?? ""} className=" object-cover" priority={false} />
-        </div>
-      ) : null}
+      {image ? <CustomImage src={image} alt={imageAlt ?? title ?? ""} /> : null}
     </Card>
   );
 }

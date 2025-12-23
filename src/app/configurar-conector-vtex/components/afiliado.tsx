@@ -4,9 +4,9 @@ import {
   CustomAccordionTrigger,
 } from "@/components/shared/custom-accordion";
 import { CustomAccountLink } from "@/components/shared/custom-account-link";
-import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import afiliadoImage from "../../../../public/assets/images/novo-afiliado.png";
+import { CustomImage } from "@/components/shared/custom-image";
 
 export function Afiliado() {
   const { t } = useTranslation();
@@ -51,7 +51,7 @@ export function Afiliado() {
           </li>
           <li>{t("afiliado.steps.save")}</li>
         </ol>
-        <Image src={afiliadoImage} alt="Afiliado VTEX" className="h-full max-h-[440px] object-contain" />
+        <CustomImage src={afiliadoImage} alt="Afiliado VTEX" height={480} />
       </CustomAccordionContent>
     </CustomAccordionItem>
   );
