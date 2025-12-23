@@ -7,8 +7,9 @@ import { twMerge } from "tailwind-merge";
 
 export function LanguageToggle() {
   const { i18n, t } = useTranslation();
+  console.log("i18n: ", i18n);
 
-  const currentLang = i18n.language === "pt" ? "PT" : "EN";
+  const currentLang = i18n.language.includes("pt") ? "PT" : "EN";
 
   const options = [
     {
