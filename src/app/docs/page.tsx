@@ -15,6 +15,7 @@ export default function Docs() {
     { title: t("docs.pages.configureCredentials"), href: "/configurar-credenciais-vtex", tag: "vtex" },
     { title: t("docs.pages.fieldMapping"), href: "/mapeamento-de-campos", tag: "vtex" },
     { title: t("docs.pages.catalogIntegration"), href: "/integracao-do-catalogo", tag: "vtex" },
+    { title: t("docs.pages.shippingLabel"), href: "/etiqueta-de-envio", tag: "vtex" },
     { title: t("docs.pages.faq"), href: "/faq" },
   ];
 

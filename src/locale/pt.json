@@ -472,7 +472,8 @@
       "configureCredentials": "Configurar credenciais na VTEX",
       "fieldMapping": "Mapeamento de campos",
       "catalogIntegration": "Integração do catálogo",
-      "faq": "Perguntas Frequentes"
+      "faq": "Perguntas Frequentes",
+      "shippingLabel": "Etiqueta de envio"
     }
   },
   "faq": {
@@ -565,6 +566,26 @@
           "description": "Como a entrega das amostras grátis não é de responsabilidade do TikTok Shop, <strong>a etiqueta de envio não é emitida pelo TikTok</strong>."
         }
       }
+    }
+  },
+  "shippingLabel": {
+    "title": "Etiqueta de Envio",
+    "description": "Após a realização de um pedido e o envio da nota fiscal, a etiqueta de envio é gerada automaticamente pelo TikTok e enviada à VTEX.",
+    "howToView": "Como visualizar a etiqueta na VTEX:",
+    "steps": {
+      "step1": "Acesse o Admin VTEX.",
+      "step2": "Vá até o menu Marketplace > Pedidos.",
+      "step3": "Localize o pedido desejado na lista.",
+      "step4": "O link da etiqueta estará disponível no campo Número de rastreio."
+    },
+    "afterClick": "Após clicar no link do número de rastreio, clique em <strong>\"Vá para a página de rastreamento da transportadora\".</strong>",
+    "important": {
+      "title": "Importante:",
+      "description": "O link gerado pelo TikTok possui validade de aproximadamente <strong>2 dias</strong>. Recomendamos que a etiqueta seja baixada dentro desse prazo."
+    },
+    "note": {
+      "title": "Observação:",
+      "description": "No <strong>primeiro pedido realizado</strong>, recomendamos que a geração da etiqueta seja feita <strong>manualmente</strong> diretamente no painel do TikTok Shop. Isso é necessário pois podem ser exigidas configurações adicionais de envio na conta TikTok. Após esse primeiro ajuste, a geração de etiquetas para os pedidos seguintes ocorrerá automaticamente."
     }
   }
 }
