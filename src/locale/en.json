@@ -103,7 +103,7 @@
     }
   },
   "tiktokSetup": {
-    "title": "TikTok Shop setup",
+    "title": "TikTok Shop Setup",
     "description": "Let’s prepare your TikTok Shop environment for integration.",
     "install": {
       "title": "Step 1 - Install the Corebiz Connector on TikTok Shop",
@@ -147,7 +147,7 @@
     }
   },
   "configurarConectorVtex": {
-    "title": "VTEX Admin setup",
+    "title": "VTEX Admin Setup",
     "description": "In this step, you will configure your VTEX account to allow integration with TikTok Shop through the Corebiz connector."
   },
   "appKeys": {
@@ -465,7 +465,7 @@
     "pages": {
       "prerequisites": "Prerequisites",
       "createSeller": "Create a TikTok seller account",
-      "tiktokSetup": "TikTok setup",
+      "tiktokSetup": "TikTok Setup",
       "createBrand": "Create a brand on TikTok",
       "configureConnector": "Configure the VTEX connector",
       "configureCredentials": "Configure credentials on VTEX",
