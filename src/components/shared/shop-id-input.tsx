@@ -7,9 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { TIKTOK_SHOP_ID_STORAGE_KEY } from "@/constants";
-import { useTranslation } from "react-i18next";
+
 export function ShopIdInput() {
-  const { t } = useTranslation();
   const { get } = useLocalStorage<string>(TIKTOK_SHOP_ID_STORAGE_KEY);
 
   const [shopId, setShopId] = useState("");
