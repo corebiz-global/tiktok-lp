@@ -9,6 +9,7 @@ import { DailyLimit } from "./components/daily-limit";
 import { Variations } from "./components/variations";
 import { MandatoryAttributes } from "./components/mandatory-attributes";
 import { SizeChart } from "./components/size-chart";
+import { ProductCertifications } from "./components/product-certifications";
 import { Dashboard } from "./components/dashboard";
 import { PostIntegration } from "./components/post-integration";
 import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
@@ -40,6 +41,7 @@ export default function Integration() {
         <Variations />
         <MandatoryAttributes />
         <SizeChart />
+        <ProductCertifications />
         <Dashboard />
         <PostIntegration />
       </CustomAccordion>

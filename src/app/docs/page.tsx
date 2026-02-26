@@ -16,6 +16,12 @@ export default function Docs() {
     { title: t("docs.pages.fieldMapping"), href: "/mapeamento-de-campos", tag: "vtex" },
     { title: t("docs.pages.catalogIntegration"), href: "/integracao-do-catalogo", tag: "vtex" },
     { title: t("docs.pages.shippingLabel"), href: "/etiqueta-de-envio", tag: "vtex" },
+    {
+      title: t("docs.pages.connectorVersions"),
+      href: "https://developers.vtex.com/docs/apps/corebiz.tiktok-connector/versions",
+      tag: "vtex",
+      external: true,
+    },
     { title: t("docs.pages.faq"), href: "/faq" },
   ];
 
@@ -32,6 +38,8 @@ export default function Docs() {
           <li key={page.href}>
             <Link
               href={page.href}
+              target={page.external ? "_blank" : undefined}
+              rel={page.external ? "noreferrer" : undefined}
               className="
                 group block h-full rounded-2xl border p-5
                 transition-colors

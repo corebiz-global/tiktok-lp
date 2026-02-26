@@ -1,590 +1,373 @@
 {
   "language-pt": "Portuguese",
   "language-en": "English",
-  "header": {
-    "nav": {
-      "home": "Home",
-      "docs": "Documentation",
-      "contact": "Contact"
-    }
-  },
-  "commons": {
-    "continue": "Continue",
-    "back": "Back",
-    "info": "Information",
-    "attention": "Attention",
-    "start": "Start",
-    "steps": "Step by step",
-    "tiktok": {
-      "badge": "Tutorial • TikTok Shop"
-    },
-    "vtex": {
-      "badge": "Tutorial • VTEX"
-    }
-  },
-  "hero": {
-    "title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
-    "description": "Expand your reach and sell more on TikTok. This page ensures that you have everything ready before starting the connector setup."
-  },
-  "preRequisites": {
-    "content": {
-      "title": "Before you start (Essential prerequisites)",
-      "description": "Make sure you have the following before starting the integration."
-    },
-    "items": {
-      "vtexAccount": {
-        "title": "Active VTEX account",
-        "label": "VTEX Account",
-        "placeholder": "Enter your VTEX store account",
-        "description": "Have products, inventory, and a commercial policy configured (it can be just the main policy). Your VTEX account must be configured as a marketplace."
-      },
-      "tiktokSeller": {
-        "title": "TikTok Shop Seller account",
-        "description": "Create your seller account on TikTok Shop to start the integration.",
-        "cta": "Create seller account"
-      }
-    },
-    "alert": {
-      "title": "Important",
-      "description": "Currently, the Corebiz connector works only with the main VTEX account. For sub-account scenarios, a specific analysis is required."
-    },
-    "footer": {
-      "text": "If you already have everything above, you are ready for the next step."
-    }
-  },
-  "criarContaSeller": {
-    "hero": {
-      "badge": "Tutorial • TikTok Shop",
-      "title": "Create a TikTok Shop Seller account",
-      "description": "Creating a seller account is the first step to making your products available on TikTok Shop. With it, you will be able to manage products, orders, deliveries, and payments.",
-      "cta": "Create TikTok Shop account"
-    },
-    "step1": {
-      "title": "Create the seller account",
-      "description": "Access the Seller Center and start the registration process.",
-      "intro": {
-        "before": "When starting the registration, remember to correctly select the ",
-        "highlight": "selling country",
-        "after": ". You can create your account using:"
-      },
-      "accountOptions": [
-        "TikTok account",
-        "TikTok Business account",
-        "Email registration"
-      ],
-      "imageAlt": "Create TikTok Shop account",
-      "documents": {
-        "title": "Required documentation for registration",
-        "items": [
-          "Legal representative ID document",
-          "Verification selfies holding the document next to the face (clearly visible photo)",
-          "Company document",
-          "Full legal business name",
-          "CNPJ number",
-          "Company opening date",
-          "Registered business address",
-          "Bank account",
-          "Tax information"
-        ]
-      }
-    },
-    "links": {
-      "title": "Useful links — TikTok Shop",
-      "description": "Official documentation and policies to support your setup and operation.",
-      "items": {
-        "sellerRegistration": "Seller registration",
-        "accountSettings": "Account settings and customization",
-        "accountRights": "Rights and rules for the official TikTok Shop account",
-        "contentPolicy": "Content policy",
-        "adsPolicy": "Advertising policies",
-        "policyCenter": "Policy center",
-        "partnerDocs": "TikTok Shop Partner — Documentation"
-      }
-    }
-  },
-  "tiktokSetup": {
-    "title": "TikTok Shop Setup",
-    "description": "Let’s prepare your TikTok Shop environment for integration.",
-    "install": {
-      "title": "Step 1 - Install the Corebiz Connector on TikTok Shop",
-      "steps": [
-        "Access your TikTok Shop Seller Center",
-        "Navigate to \"Apps & Partners\" in the main menu",
-        "Click on \"App Store\"",
-        "Filter by \"Popular platforms\" with the value \"VTEX\"",
-        "Select the app \"VTEX Sync by Corebiz\"",
-        "Click \"Install\" and follow the indicated steps"
-      ]
-    },
-    "token": {
-      "title": "Step 2 - Generate the permission token",
-      "steps": [
-        "After installation, access the \"App Store\" section again",
-        "Locate the app \"VTEX Sync by Corebiz\"",
-        "Click the three dots icon (...) next to the app",
-        "Go to \"My apps and incidents\"",
-        "Find \"VTEX Sync\" and click \"Authorize\""
-      ]
-    },
-    "brands": {
-      "title": "Create and authorize your brands on TikTok Shop",
-      "description": "Before starting catalog integration, it is essential to create product brands. This step prevents blocks or errors during processing. In addition, brand authorization proves that the seller has permission to sell products on TikTok Shop.",
-      "steps": [
-        "In the Seller Center, click the home icon in the top menu",
-        "Go to \"My account\" > \"Account settings\"",
-        "Access \"Qualification center\" > \"Brand qualification\"",
-        "Click \"Add brand authorization\"",
-        "Include the authorization type and required document"
-      ]
-    },
-    "tip": {
-      "title": "Important tip",
-      "description": "Make sure that the brand name in TikTok Shop is exactly the same as the one used in VTEX. This is essential for correct mapping and to avoid product blocks."
-    },
-    "footer": {
-      "before": "For more details, see the",
-      "link": "official TikTok Shop brand documentation"
-    }
-  },
-  "configurarConectorVtex": {
-    "title": "VTEX Admin Setup",
-    "description": "In this step, you will configure your VTEX account to allow integration with TikTok Shop through the Corebiz connector."
-  },
-  "appKeys": {
-    "trigger": "1. Generate App Key and App Token",
-    "steps": {
-      "admin": "Access the VTEX Admin.",
-      "profile": "Click on your profile avatar (top right corner).",
-      "settings": "Go to Account settings → Application keys.",
-      "manage": "Click Manage my keys.",
-      "generate": "Click + Generate key.",
-      "label": "Fill in the label",
-      "labelExample": "TikTok Shop Integration",
-      "role": "Under Access profile, select Owner (Super Admin).",
-      "confirm": "Click Generate."
-    },
-    "alert": {
-      "title": "Important",
-      "description": "The App Token will be displayed only once. Copy it immediately and store it in a secure location. If the token is lost, you will need to generate a new key."
-    }
-  },
-  "afiliado": {
-    "trigger": "2. Configure Affiliate (Marketplace)",
-    "steps": {
-      "admin": "In the VTEX Admin, go to Store Settings → Orders → Settings or access: ",
-      "tab": "Access the Affiliates tab.",
-      "new": "Click New Affiliate.",
-      "fields": "Fill in the fields:",
-      "save": "Click Save."
-    },
-    "fields": {
-      "name": "Name",
-      "id": "ID",
-      "policy": "Commercial policy",
-      "email": "Email",
-      "endpoint": "Search endpoint",
-      "searchEndpoint": "Search Endpoint",
-      "paymentMethod": "Use payment method"
-    },
-    "values": {
-      "name": "TikTok Shop",
-      "id": "TTS",
-      "policy": "policy number",
-      "email": "your email",
-      "searchEndpoint": "1.xx",
-      "paymentMethod": "unchecked"
-    }
-  },
-  "installation": {
-    "trigger": "3. Install the Corebiz Connector",
-    "steps": {
-      "apps": "In the VTEX Admin side menu, go to Apps.",
-      "search": "Search for Corebiz - TikTok Shop Connector or access: ",
-      "install": "Install the application."
-    },
-    "alert": {
-      "title": "Attention",
-      "description": "The connector will only work if your store is authorized by Corebiz. Contact with the commercial team is required. This application is not free."
-    }
-  },
-  "mapeamentoDeCampos": {
-    "title": "Field Mapping",
-    "description": "Now that you have configured your VTEX account and installed the Corebiz connector, it is time to map the essential fields to ensure that your products are correctly synchronized with TikTok Shop.",
-    "access": {
-      "title": "Access to the Connector",
-      "description": "All configurations and mappings are performed directly in the Corebiz connector panel within the VTEX Admin.",
-      "linkLabel": "Access Corebiz connector panel"
-    },
-    "brandMapping": {
-      "title": "Brand Mapping",
-      "access": {
-        "title": "Access brand mapping",
-        "description": "In the VTEX connector panel, access the Brand Mapping section or go to: ",
-        "helper": "You must replace {{account}} with your VTEX store account if it is not yet configured."
-      },
-      "steps": {
-        "list": "A list of your brands registered in VTEX will be displayed.",
-        "select": "For each brand, select the corresponding brand in TikTok Shop.",
-        "auth": "Available brands in TikTok are those that already have approved authorization.",
-        "save": "After mapping all brands, click Save."
-      },
-      "rules": {
-        "block": "Catalog integration will only be allowed after brand mapping is completed.",
-        "limit": "The current version of the application supports connecting up to 999 brands."
-      }
-    },
-    "categoryMapping": {
-      "title": "Category Mapping",
-      "access": {
-        "title": "Access category mapping"
-      },
-      "steps": {
-        "tree": "A list with the VTEX category tree will be displayed.",
-        "select": "Select VTEX categories one by one.",
-        "match": "For each selected category, choose the corresponding category in TikTok Shop.",
-        "confirm": "Check if the category selected in TikTok matches the value displayed above the selector.",
-        "save": "After each category mapping, click Save changes."
-      }
-    },
-    "logisticsMapping": {
-      "title": "Logistics Mapping",
-      "access": {
-        "title": "Access logistics mapping",
-        "description": "In the VTEX connector panel, access the Logistics Mapping section or go to: "
-      },
-      "steps": {
-        "select": "Select the default warehouse to be used for catalog integration (e.g., TikTok Shop).",
-        "context": "This warehouse will be the base for inventory and logistics of the integrated products.",
-        "save": "Click Save to register the logistics mapping."
-      }
-    }
-  },
-  "configCredenciasVtex": {
-    "title": "Credentials Setup",
-    "description": "Now you will configure the necessary credentials in the Corebiz connector to establish communication between your VTEX store and TikTok Shop.",
-    "access": {
-      "title": "Access connector settings",
-      "description": "Settings are performed directly in the connector panel within the VTEX Admin or access: ",
-      "linkLabel": "Access Corebiz connector settings",
-      "linkHelper": "You will be redirected to the VTEX Admin. You must be logged in."
-    },
-    "intro": "In the settings tab, all fields must be filled in and the application must be active for the integration to work correctly.",
-    "activation": {
-      "title": "Application activation",
-      "toggle": "Enable the application activation toggle."
-    },
-    "vtexConfig": {
-      "title": "VTEX Configuration",
-      "fields": {
-        "affiliate": {
-          "label": "Affiliate",
-          "description": "affiliate name (e.g., TikTok Shop)."
-        },
-        "endpoint": {
-          "label": "Notification endpoint",
-          "description": "same endpoint configured in the affiliate."
-        },
-        "email": {
-          "label": "Email",
-          "description": "used for notifications."
-        },
-        "policy": {
-          "label": "Commercial policy",
-          "description": "same policy configured in the affiliate."
-        },
-        "salesChannel": {
-          "label": "Sales channel",
-          "description": "VTEX Seller."
-        },
-        "key": {
-          "label": "VTEX Key",
-          "description": "App Key generated for TikTok."
-        },
-        "token": {
-          "label": "VTEX Token",
-          "description": "App Token generated for TikTok."
-        }
-      }
-    },
-    "tiktokConfig": {
-      "title": "TikTok Configuration",
-      "shopId": {
-        "label": "ShopId",
-        "description": "identification number of your TikTok Shop store."
-      },
-      "helper": "If you cannot view the ShopId in your seller profile, contact TikTok or the Corebiz team."
-    },
-    "catalogConfig": {
-      "title": "Catalog Configuration",
-      "variation": {
-        "label": "Variation attributes",
-        "description": "enter attribute names separated by commas (e.g., Size, Color, Print)."
-      },
-      "limit": "TikTok supports a maximum of 3 variations per product."
-    }
-  },
-  "onboardingCompleted": {
-    "title": "Setup completed",
-    "description": "You have completed all the required steps to configure the VTEX + TikTok Shop connector. The information has been saved successfully and the environment is ready for activation.",
-    "commercialActivation": {
-      "title": "Commercial activation",
-      "description": "This application is a paid Corebiz service. To use it in production, commercial activation is required.",
-      "contactLabel": "Commercial contact:"
-    },
-    "support": {
-      "title": "Support",
-      "description": "If you have technical questions or need additional assistance during the process:",
-      "contactLabel": "Technical support:"
-    },
-    "footer": "After commercial activation, you will be able to start syncing products, prices, and inventory between VTEX and TikTok Shop.",
-    "startIntegration": "For more information, visit: Start Catalog Integration"
-  },
-  "integration": {
-    "title": "Catalog Integration",
-    "description": "At this stage, you will integrate your VTEX store products with TikTok Shop, track the integration status, and understand how post-integration management works.",
-    "mappingReminder": {
-      "title": "Field mapping required",
-      "description": "For the integration to work properly, it is necessary to configure field mapping in the connector, ensuring that the attributes required by TikTok Shop are correctly associated with VTEX fields.",
-      "link": "For more information, visit: Field Mapping"
-    },
-    "steps": {
-      "startIntegration": {
-        "title": "1. Start Catalog Integration",
-        "intro": "In the TikTok Shop Connector panel in VTEX Admin, go to the <strong>Catalog Integration</strong> section.",
-        "list": [
-          "Access the connector panel in VTEX Admin.",
-          "Click on <strong>Catalog Integration</strong>.",
-          "Choose one of the available integration options.",
-          "Click on <strong>Start Integration</strong>."
-        ],
-        "optionsTitle": "Available options:",
-        "options": {
-          "full": "<strong>Integrate entire catalog:</strong> recommended for stores with up to 1.000 products.",
-          "collection": "<strong>Integrate by collection:</strong> recommended for stores with more than 1.000 products. Enter the ID of the collection you want to integrate."
-        }
-      },
-      "limits": {
-        "title": "2. TikTok Shop Product Limit",
-        "alertTitle": "Daily integration limit",
-        "alertDescription": "TikTok Shop allows sending up to <strong>1.000 products per day</strong>.",
-        "moreThanLimit": "If your store has more than 1.000 products:",
-        "list": [
-          "The integration must be continued on the following day.",
-          "Products that are not processed will appear on the dashboard as <strong>not processed</strong>."
-        ]
-      },
-      "catalogConfig": {
-        "title": "3. Catalog Configuration (Variations)",
-        "description": "During integration, it is necessary to correctly configure the product <strong>variation attributes</strong>.",
-        "exampleLabel": "Enter the attribute names separated by commas. Example:",
-        "example": "Size, Color, Pattern",
-        "alertTitle": "Variation limit",
-        "alertDescription": "TikTok Shop supports up to <strong>3 variations per product</strong>. Products exceeding this limit will have the variation ignored during integration."
-      },
-      "requiredAttributes": {
-        "title": "4. Mandatory Attributes (Composition / Ingredients)",
-        "description": "Some categories require composition or ingredient information to be sent to TikTok Shop.",
-        "example": "Example: Cosmetics",
-        "list": [
-          "The <strong>TikTok Composition</strong> field is mandatory for certain categories.",
-          "This field must be created as a <strong>SKU specification</strong> in VTEX and associated with the product category.",
-          "The composition or ingredient value must be <strong>filled directly in the SKU</strong>."
-        ],
-        "howTo": {
-          "title": "How to configure the TikTok Composition field",
-          "steps": [
-            "In VTEX Admin, go to <strong>Catalog > Categories</strong>.",
-            "Select the product category and click <strong>Actions > Field (SKU)</strong>.",
-            "Click <strong>New Field</strong> and create the specification with the exact name <strong>TikTok Composition</strong>.",
-            "Save the field and then go to <strong>Catalog > Products and SKUs</strong>.",
-            "Select the product, open <strong>Specifications</strong>, and fill in the <strong>TikTok Composition</strong> field."
-          ]
-        },
-        "alertTitle": "Attention",
-        "alertDescription": "If the <strong>TikTok Composition</strong> field does not exist or is not filled, the integration will automatically send the default value <strong>\"Information currently unavailable.\"</strong> to TikTok Shop."
-      },
-      "fashion": {
-        "title": "5. Size Chart",
-        "description": "For products in the <strong>Fashion</strong> category, TikTok accepts the submission of a <strong>size chart</strong>.",
-        "upload": "The size chart can be uploaded in the <strong>Field Mapping</strong> tab of the connector.",
-        "pathLabel": "Path in VTEX Admin:",
-        "path": "VTEX Admin > Corebiz > TikTok Connector > Field Mapping"
-      },
-      "dashboard": {
-        "title": "6. Integration Dashboard",
-        "description": "After starting the integration, you can track the entire process through the <strong>Connector Dashboard</strong>.",
-        "listIntro": "On the dashboard, you can view:",
-        "list": [
-          "Total products",
-          "Products already existing on TikTok",
-          "Successfully integrated products",
-          "Products with errors",
-          "Unprocessed products",
-          "Detailed error reasons"
-        ]
-      },
-      "postIntegration": {
-        "title": "7. Post-Integration Management",
-        "intro": "After the catalog integration, some processes become automatic.",
-        "stockPrice": {
-          "title": "Stock and price synchronization",
-          "list": [
-            "Stock and base price updates are sent automatically.",
-            "Make sure the trade policy configured in the connector matches the one used in VTEX."
-          ]
-        },
-        "shippingLabels": {
-          "title": "Shipping labels",
-          "list": [
-            "Automatically generated by TikTok after the order is placed.",
-            "Available in the order within VTEX.",
-            "The label link is valid for approximately 2 days."
-          ]
-        },
-        "freeSamples": {
-          "title": "Free samples (Creators)",
-          "list": [
-            "Tracking code submission is manual.",
-            "Orders enter VTEX with a value of $0.01."
-          ]
-        },
-        "returns": {
-          "title": "Returns and exchanges",
-          "description": "Return and exchange policies must be checked directly in the official TikTok Shop documentation."
-        }
-      }
-    }
-  },
-  "contacts": {
-    "title": "Important Contacts",
-    "description": "Here are the essential contacts for technical and commercial support related to the Corebiz VTEX + TikTok Shop connector."
-  },
-  "docs": {
-    "title": "Documentation",
-    "description": "Step-by-step guides for installing, configuring, and using the connector.",
-    "pages": {
-      "prerequisites": "Prerequisites",
-      "createSeller": "Create a TikTok seller account",
-      "tiktokSetup": "TikTok Setup",
-      "createBrand": "Create a brand on TikTok",
-      "configureConnector": "Configure the VTEX connector",
-      "configureCredentials": "Configure credentials on VTEX",
-      "fieldMapping": "Field mapping",
-      "catalogIntegration": "Catalog integration",
-      "faq": "Frequently Asked Questions",
-      "shippingLabel": "Shipping label"
-    }
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "description": "Frequently asked questions about configuration, orders, logistics, and catalog in the integration between VTEX and TikTok Shop.",
-    "access": {
-      "title": "Access and Initial Configuration",
-      "appKey": {
-        "question": "What is the format of the AppKey and AppToken and which permission profiles are required?",
-        "answer": "It must have <strong>Owner (Super Admin) – Restricted permission.</strong>"
-      },
-      "integrationInfo": {
-        "question": "What information is required to integrate with VTEX?",
-        "items": {
-          "tiktokToken": "Token generated in the TikTok Shop admin",
-          "vtexKeys": "VTEX APP-KEY and APP-TOKEN",
-          "tiktokAccountId": "TikTok account ID",
-          "tradePolicy": "Sales channel (trade policy)",
-          "orderPrefix": "Order identification prefix"
-        }
-      },
-      "preConfig": {
-        "question": "Is any pre-configuration required in the VTEX environment?",
-        "answer": "Yes. It is necessary to configure the marketplace in VTEX and have at least one active trade policy.",
-        "link": "View prerequisites"
-      }
-    },
-    "clients": {
-      "title": "Customer Registration",
-      "customers": {
-        "question": "Are TikTok Shop customers registered in the VTEX customer list (CL)?",
-        "answer": "No. Customers originating from TikTok Shop are not added to the VTEX customer list (CL)."
-      }
-    },
-    "commercial": {
-      "title": "Commercial Strategy and Policies",
-      "policy": {
-        "question": "Is it necessary to create a new trade policy for TikTok Shop?",
-        "answer": "Not necessarily. Creating a new trade policy is up to the merchant."
-      }
-    },
-    "payments": {
-      "title": "Payment Methods",
-      "payment": {
-        "question": "Which payment method appears on the order created in VTEX?",
-        "answer": "The payment is shown as <strong>assumed by the TikTok Shop affiliate</strong>."
-      }
-    },
-    "logistics": {
-      "title": "Shipping and Logistics",
-      "shippingMethod": {
-        "question": "What is the default shipping method on TikTok Shop?",
-        "answer": "The default method is <strong>“Shipped by the platform with standard shipping services”</strong>, automatically defined by TikTok."
-      },
-      "carriers": {
-        "question": "Which carriers are available?",
-        "list": "J&T, Correios, and Imile.",
-        "note": "Each seller will be assigned to only one carrier after the first order."
-      },
-      "deliveryStatus": {
-        "question": "How will I know when the order has been delivered?",
-        "alertTitle": "Delivery status",
-        "alertDescription": "Delivery confirmation is not displayed in VTEX. The last visible status will be the invoiced order."
-      }
-    },
-    "products": {
-      "title": "Synchronization and Special Flows",
-      "sync": {
-        "question": "How does product synchronization work between VTEX and TikTok Shop?",
-        "paragraphs": {
-          "intro": "The integration between VTEX and TikTok Shop ensures that <strong>stock</strong> and <strong>base price</strong> (price without discounts) information is always up to date across both platforms.",
-          "updateFlow": "Whenever there is a change in stock or base price of a product in VTEX, this update is automatically sent to TikTok Shop, preventing the sale of items with outdated prices or unavailable stock.",
-          "realtime": "Synchronization happens <strong>automatically and in real time</strong>, as long as the product is properly published and linked between the platforms."
-        },
-        "alert": {
-          "title": "Important note",
-          "description": "Stock and price synchronization considers the <strong>trade policy configured in the connector panel</strong>. Make sure the trade policy used in VTEX to display prices and control stock is the same one configured for synchronization with TikTok Shop."
-        }
-      },
-      "samples": {
-        "question": "How does free sample shipping for creators work?",
-        "paragraphs": {
-          "flow": "Free sample shipping follows a different flow compared to standard TikTok Shop orders and is handled in a more manual way.",
-          "tracking": "Currently, TikTok has limitations regarding compatible carriers for this type of shipment. Therefore, it is necessary to generate and manually insert the <strong>tracking code</strong> in VTEX, either directly in the order or via ERP.",
-          "automation": "To streamline this process, an automation was created in the connector so that the tracking code informed in VTEX is automatically sent to TikTok Shop.",
-          "value": "Free sample orders enter VTEX with a value of <strong>R$ 0.01</strong>, since the system does not allow invoicing orders with a value of <strong>R$ 0.00</strong>."
-        },
-        "alert": {
-          "title": "Important",
-          "description": "Since free sample delivery is not handled by TikTok Shop, <strong>the shipping label is not issued by TikTok</strong>."
-        }
-      }
-    }
-  },
-  "shippingLabel": {
-    "title": "Shipping Label",
-    "description": "After an order is placed and the invoice is submitted, the shipping label is automatically generated by TikTok and sent to VTEX.",
-    "howToView": "How to view the shipping label in VTEX:",
-    "steps": {
-      "step1": "Access the VTEX Admin.",
-      "step2": "Go to Marketplace > Orders.",
-      "step3": "Find the desired order in the list.",
-      "step4": "The shipping label link will be available in the Tracking Number field."
-    },
-    "afterClick": "After clicking the tracking number link, click <strong>\"Go to the carrier tracking page\".</strong>",
-    "important": {
-      "title": "Important:",
-      "description": "The link generated by TikTok is valid for approximately <strong>2 days</strong>. We recommend downloading the shipping label within this period."
-    },
-    "note": {
-      "title": "Note:",
-      "description": "For the <strong>first order placed</strong>, we recommend generating the shipping label <strong>manually</strong> directly in the TikTok Shop dashboard. This is necessary because additional shipping configurations may be required on the TikTok account. After this initial setup, shipping labels for subsequent orders will be generated automatically."
-    }
-  }
+  "header.nav.home": "Home",
+  "header.nav.docs": "Documentation",
+  "header.nav.contact": "Contact",
+  "commons.continue": "Continue",
+  "commons.back": "Back",
+  "commons.info": "Information",
+  "commons.attention": "Attention",
+  "commons.start": "Start",
+  "commons.steps": "Step by step",
+  "commons.tiktok.badge": "Tutorial • TikTok Shop",
+  "commons.vtex.badge": "Tutorial • VTEX",
+  "hero.title": "Corebiz Connector: integrate your VTEX store with TikTok Shop in just a few steps",
+  "hero.description": "Expand your reach and sell more on TikTok. This page ensures that you have everything ready before starting the connector setup.",
+  "preRequisites.content.title": "Before you start (Essential prerequisites)",
+  "preRequisites.content.description": "Make sure you have the following before starting the integration.",
+  "preRequisites.items.vtexAccount.title": "Active VTEX account",
+  "preRequisites.items.vtexAccount.label": "VTEX Account",
+  "preRequisites.items.vtexAccount.placeholder": "Enter your VTEX store account",
+  "preRequisites.items.vtexAccount.description": "Have products, inventory, and a commercial policy configured (it can be just the main policy). Your VTEX account must be configured as a marketplace.",
+  "preRequisites.items.tiktokSeller.title": "TikTok Shop Seller account",
+  "preRequisites.items.tiktokSeller.description": "Create your seller account on TikTok Shop to start the integration.",
+  "preRequisites.items.tiktokSeller.cta": "Create seller account",
+  "preRequisites.alert.title": "Important",
+  "preRequisites.alert.description": "Currently, the Corebiz connector works only with the main VTEX account. For sub-account scenarios, a specific analysis is required.",
+  "preRequisites.footer.text": "If you already have everything above, you are ready for the next step.",
+  "criarContaSeller.hero.badge": "Tutorial • TikTok Shop",
+  "criarContaSeller.hero.title": "Create a TikTok Shop Seller account",
+  "criarContaSeller.hero.description": "Creating a seller account is the first step to making your products available on TikTok Shop. With it, you will be able to manage products, orders, deliveries, and payments.",
+  "criarContaSeller.hero.cta": "Create TikTok Shop account",
+  "criarContaSeller.step1.title": "Create the seller account",
+  "criarContaSeller.step1.description": "Access the Seller Center and start the registration process.",
+  "criarContaSeller.step1.intro.before": "When starting the registration, remember to correctly select the ",
+  "criarContaSeller.step1.intro.highlight": "selling country",
+  "criarContaSeller.step1.intro.after": ". You can create your account using:",
+  "criarContaSeller.step1.accountOptions": [
+    "TikTok account",
+    "TikTok Business account",
+    "Email registration"
+  ],
+  "criarContaSeller.step1.imageAlt": "Create TikTok Shop account",
+  "criarContaSeller.step1.documents.title": "Required documentation for registration",
+  "criarContaSeller.step1.documents.items": [
+    "Legal representative ID document",
+    "Verification selfies holding the document next to the face (clearly visible photo)",
+    "Company document",
+    "Full legal business name",
+    "CNPJ number",
+    "Company opening date",
+    "Registered business address",
+    "Bank account",
+    "Tax information"
+  ],
+  "criarContaSeller.links.title": "Useful links — TikTok Shop",
+  "criarContaSeller.links.description": "Official documentation and policies to support your setup and operation.",
+  "criarContaSeller.links.items.sellerRegistration": "Seller registration",
+  "criarContaSeller.links.items.accountSettings": "Account settings and customization",
+  "criarContaSeller.links.items.accountRights": "Rights and rules for the official TikTok Shop account",
+  "criarContaSeller.links.items.contentPolicy": "Content policy",
+  "criarContaSeller.links.items.adsPolicy": "Advertising policies",
+  "criarContaSeller.links.items.policyCenter": "Policy center",
+  "criarContaSeller.links.items.partnerDocs": "TikTok Shop Partner — Documentation",
+  "tiktokSetup.title": "TikTok Shop Setup",
+  "tiktokSetup.description": "Let’s prepare your TikTok Shop environment for integration.",
+  "tiktokSetup.install.title": "Step 1 - Install the Corebiz Connector on TikTok Shop",
+  "tiktokSetup.install.steps": [
+    "Access your TikTok Shop Seller Center",
+    "Navigate to \"Apps & Partners\" in the main menu",
+    "Click on \"App Store\"",
+    "Filter by \"Popular platforms\" with the value \"VTEX\"",
+    "Select the app \"VTEX Sync by Corebiz\"",
+    "Click \"Install\" and follow the indicated steps"
+  ],
+  "tiktokSetup.token.title": "Step 2 - Generate the permission token",
+  "tiktokSetup.token.steps": [
+    "After installation, access the \"App Store\" section again",
+    "Locate the app \"VTEX Sync by Corebiz\"",
+    "Click the three dots icon (...) next to the app",
+    "Go to \"My apps and incidents\"",
+    "Find \"VTEX Sync\" and click \"Authorize\""
+  ],
+  "tiktokSetup.brands.title": "Create and authorize your brands on TikTok Shop",
+  "tiktokSetup.brands.description": "Before starting catalog integration, it is essential to create product brands. This step prevents blocks or errors during processing. In addition, brand authorization proves that the seller has permission to sell products on TikTok Shop.",
+  "tiktokSetup.brands.steps": [
+    "In the Seller Center, click the home icon in the top menu",
+    "Go to \"My account\" > \"Account settings\"",
+    "Access \"Qualification center\" > \"Brand qualification\"",
+    "Click \"Add brand authorization\"",
+    "Include the authorization type and required document"
+  ],
+  "tiktokSetup.tip.title": "Important tip",
+  "tiktokSetup.tip.description": "Make sure that the brand name in TikTok Shop is exactly the same as the one used in VTEX. This is essential for correct mapping and to avoid product blocks.",
+  "tiktokSetup.footer.before": "For more details, see the",
+  "tiktokSetup.footer.link": "official TikTok Shop brand documentation",
+  "configurarConectorVtex.title": "VTEX Admin Setup",
+  "configurarConectorVtex.description": "In this step, you will configure your VTEX account to allow integration with TikTok Shop through the Corebiz connector.",
+  "appKeys.trigger": "1. Generate App Key and App Token",
+  "appKeys.steps.admin": "Access the VTEX Admin.",
+  "appKeys.steps.profile": "Click on your profile avatar (top right corner).",
+  "appKeys.steps.settings": "Go to Account settings → Application keys.",
+  "appKeys.steps.manage": "Click Manage my keys.",
+  "appKeys.steps.generate": "Click + Generate key.",
+  "appKeys.steps.label": "Fill in the label",
+  "appKeys.steps.labelExample": "TikTok Shop Integration",
+  "appKeys.steps.role": "Under Access profile, select Owner (Super Admin).",
+  "appKeys.steps.confirm": "Click Generate.",
+  "appKeys.alert.title": "Important",
+  "appKeys.alert.description": "The App Token will be displayed only once. Copy it immediately and store it in a secure location. If the token is lost, you will need to generate a new key.",
+  "afiliado.trigger": "2. Configure Affiliate (Marketplace)",
+  "afiliado.steps.admin": "In the VTEX Admin, go to Store Settings → Orders → Settings or access: ",
+  "afiliado.steps.tab": "Access the Affiliates tab.",
+  "afiliado.steps.new": "Click New Affiliate.",
+  "afiliado.steps.fields": "Fill in the fields:",
+  "afiliado.steps.save": "Click Save.",
+  "afiliado.fields.name": "Name",
+  "afiliado.fields.id": "ID",
+  "afiliado.fields.policy": "Commercial policy",
+  "afiliado.fields.email": "Email",
+  "afiliado.fields.endpoint": "Search endpoint",
+  "afiliado.fields.searchEndpoint": "Search Endpoint",
+  "afiliado.fields.paymentMethod": "Use payment method",
+  "afiliado.values.name": "TikTok Shop",
+  "afiliado.values.id": "TTS",
+  "afiliado.values.policy": "policy number",
+  "afiliado.values.email": "your email",
+  "afiliado.values.searchEndpoint": "1.xx",
+  "afiliado.values.paymentMethod": "unchecked",
+  "installation.trigger": "3. Install the Corebiz Connector",
+  "installation.steps.apps": "In the VTEX Admin side menu, go to Apps.",
+  "installation.steps.search": "Search for Corebiz - TikTok Shop Connector or access: ",
+  "installation.steps.install": "Install the application.",
+  "installation.alert.title": "Attention",
+  "installation.alert.description": "The connector will only work if your store is authorized by Corebiz. Contact with the commercial team is required. This application is not free.",
+  "mapeamentoDeCampos.title": "Field Mapping",
+  "mapeamentoDeCampos.description": "Now that you have configured your VTEX account and installed the Corebiz connector, it is time to map the essential fields to ensure that your products are correctly synchronized with TikTok Shop.",
+  "mapeamentoDeCampos.access.title": "Access to the Connector",
+  "mapeamentoDeCampos.access.description": "All configurations and mappings are performed directly in the Corebiz connector panel within the VTEX Admin.",
+  "mapeamentoDeCampos.access.linkLabel": "Access Corebiz connector panel",
+  "mapeamentoDeCampos.brandMapping.title": "Brand Mapping",
+  "mapeamentoDeCampos.brandMapping.access.title": "Access brand mapping",
+  "mapeamentoDeCampos.brandMapping.access.description": "In the VTEX connector panel, access the Brand Mapping section or go to: ",
+  "mapeamentoDeCampos.brandMapping.access.helper": "You must replace {{account}} with your VTEX store account if it is not yet configured.",
+  "mapeamentoDeCampos.brandMapping.steps.list": "A list of your brands registered in VTEX will be displayed.",
+  "mapeamentoDeCampos.brandMapping.steps.select": "For each brand, select the corresponding brand in TikTok Shop.",
+  "mapeamentoDeCampos.brandMapping.steps.auth": "Available brands in TikTok are those that already have approved authorization.",
+  "mapeamentoDeCampos.brandMapping.steps.save": "After mapping all brands, click Save.",
+  "mapeamentoDeCampos.brandMapping.rules.block": "Catalog integration will only be allowed after brand mapping is completed.",
+  "mapeamentoDeCampos.brandMapping.rules.limit": "The current version of the application supports connecting up to 999 brands.",
+  "mapeamentoDeCampos.categoryMapping.title": "Category Mapping",
+  "mapeamentoDeCampos.categoryMapping.access.title": "Access category mapping",
+  "mapeamentoDeCampos.categoryMapping.steps.tree": "A list with the VTEX category tree will be displayed.",
+  "mapeamentoDeCampos.categoryMapping.steps.select": "Select VTEX categories one by one.",
+  "mapeamentoDeCampos.categoryMapping.steps.match": "For each selected category, choose the corresponding category in TikTok Shop.",
+  "mapeamentoDeCampos.categoryMapping.steps.confirm": "Check if the category selected in TikTok matches the value displayed above the selector.",
+  "mapeamentoDeCampos.categoryMapping.steps.save": "After each category mapping, click Save changes.",
+  "mapeamentoDeCampos.logisticsMapping.title": "Logistics Mapping",
+  "mapeamentoDeCampos.logisticsMapping.access.title": "Access logistics mapping",
+  "mapeamentoDeCampos.logisticsMapping.access.description": "In the VTEX connector panel, access the Logistics Mapping section or go to: ",
+  "mapeamentoDeCampos.logisticsMapping.steps.select": "Select the default warehouse to be used for catalog integration (e.g., TikTok Shop).",
+  "mapeamentoDeCampos.logisticsMapping.steps.context": "This warehouse will be the base for inventory and logistics of the integrated products.",
+  "mapeamentoDeCampos.logisticsMapping.steps.save": "Click Save to register the logistics mapping.",
+  "configCredenciasVtex.title": "Credentials Setup",
+  "configCredenciasVtex.description": "Now you will configure the necessary credentials in the Corebiz connector to establish communication between your VTEX store and TikTok Shop.",
+  "configCredenciasVtex.access.title": "Access connector settings",
+  "configCredenciasVtex.access.description": "Settings are performed directly in the connector panel within the VTEX Admin or access: ",
+  "configCredenciasVtex.access.linkLabel": "Access Corebiz connector settings",
+  "configCredenciasVtex.access.linkHelper": "You will be redirected to the VTEX Admin. You must be logged in.",
+  "configCredenciasVtex.intro": "In the settings tab, all fields must be filled in and the application must be active for the integration to work correctly.",
+  "configCredenciasVtex.activation.title": "Application activation",
+  "configCredenciasVtex.activation.toggle": "Enable the application activation toggle.",
+  "configCredenciasVtex.vtexConfig.title": "VTEX Configuration",
+  "configCredenciasVtex.vtexConfig.fields.affiliate.label": "Affiliate",
+  "configCredenciasVtex.vtexConfig.fields.affiliate.description": "affiliate name (e.g., TikTok Shop).",
+  "configCredenciasVtex.vtexConfig.fields.endpoint.label": "Notification endpoint",
+  "configCredenciasVtex.vtexConfig.fields.endpoint.description": "same endpoint configured in the affiliate.",
+  "configCredenciasVtex.vtexConfig.fields.email.label": "Email",
+  "configCredenciasVtex.vtexConfig.fields.email.description": "used for notifications.",
+  "configCredenciasVtex.vtexConfig.fields.policy.label": "Commercial policy",
+  "configCredenciasVtex.vtexConfig.fields.policy.description": "same policy configured in the affiliate.",
+  "configCredenciasVtex.vtexConfig.fields.salesChannel.label": "Sales channel",
+  "configCredenciasVtex.vtexConfig.fields.salesChannel.description": "VTEX Seller.",
+  "configCredenciasVtex.vtexConfig.fields.key.label": "VTEX Key",
+  "configCredenciasVtex.vtexConfig.fields.key.description": "App Key generated for TikTok.",
+  "configCredenciasVtex.vtexConfig.fields.token.label": "VTEX Token",
+  "configCredenciasVtex.vtexConfig.fields.token.description": "App Token generated for TikTok.",
+  "configCredenciasVtex.tiktokConfig.title": "TikTok Configuration",
+  "configCredenciasVtex.tiktokConfig.shopId.label": "ShopId",
+  "configCredenciasVtex.tiktokConfig.shopId.description": "identification number of your TikTok Shop store.",
+  "configCredenciasVtex.tiktokConfig.helper": "If you cannot view the ShopId in your seller profile, contact TikTok or the Corebiz team.",
+  "configCredenciasVtex.catalogConfig.title": "Catalog Configuration",
+  "configCredenciasVtex.catalogConfig.variation.label": "Variation attributes",
+  "configCredenciasVtex.catalogConfig.variation.description": "enter attribute names separated by commas (e.g., Size, Color, Print).",
+  "configCredenciasVtex.catalogConfig.limit": "TikTok supports a maximum of 3 variations per product.",
+  "onboardingCompleted.title": "Setup completed",
+  "onboardingCompleted.description": "You have completed all the required steps to configure the VTEX + TikTok Shop connector. The information has been saved successfully and the environment is ready for activation.",
+  "onboardingCompleted.commercialActivation.title": "Commercial activation",
+  "onboardingCompleted.commercialActivation.description": "This application is a paid Corebiz service. To use it in production, commercial activation is required.",
+  "onboardingCompleted.commercialActivation.contactLabel": "Commercial contact:",
+  "onboardingCompleted.support.title": "Support",
+  "onboardingCompleted.support.description": "If you have technical questions or need additional assistance during the process:",
+  "onboardingCompleted.support.contactLabel": "Technical support:",
+  "onboardingCompleted.footer": "After commercial activation, you will be able to start syncing products, prices, and inventory between VTEX and TikTok Shop.",
+  "onboardingCompleted.startIntegration": "For more information, visit: Start Catalog Integration",
+  "integration.title": "Catalog Integration",
+  "integration.description": "At this stage, you will integrate your VTEX store products with TikTok Shop, track the integration status, and understand how post-integration management works.",
+  "integration.mappingReminder.title": "Field mapping required",
+  "integration.mappingReminder.description": "For the integration to work properly, it is necessary to configure field mapping in the connector, ensuring that the attributes required by TikTok Shop are correctly associated with VTEX fields.",
+  "integration.mappingReminder.link": "For more information, visit: Field Mapping",
+  "integration.steps.startIntegration.title": "1. Start Catalog Integration",
+  "integration.steps.startIntegration.intro": "In the TikTok Shop Connector panel in VTEX Admin, go to the <strong>Catalog Integration</strong> section.",
+  "integration.steps.startIntegration.list": [
+    "Access the connector panel in VTEX Admin.",
+    "Click on <strong>Catalog Integration</strong>.",
+    "Choose one of the available integration options.",
+    "Click on <strong>Start Integration</strong>."
+  ],
+  "integration.steps.startIntegration.optionsTitle": "Available options:",
+  "integration.steps.startIntegration.options.full": "<strong>Integrate entire catalog:</strong> recommended for stores with up to 1.000 products.",
+  "integration.steps.startIntegration.options.collection": "<strong>Integrate by collection:</strong> recommended for stores with more than 1.000 products. Enter the ID of the collection you want to integrate.",
+  "integration.steps.limits.title": "2. TikTok Shop Product Limit",
+  "integration.steps.limits.alertTitle": "Daily integration limit",
+  "integration.steps.limits.alertDescription": "TikTok Shop allows sending up to <strong>1.000 products per day</strong>.",
+  "integration.steps.limits.moreThanLimit": "If your store has more than 1.000 products:",
+  "integration.steps.limits.list": [
+    "The integration must be continued on the following day.",
+    "Products that are not processed will appear on the dashboard as <strong>not processed</strong>."
+  ],
+  "integration.steps.catalogConfig.title": "3. Catalog Configuration (Variations)",
+  "integration.steps.catalogConfig.description": "During integration, it is necessary to correctly configure the product <strong>variation attributes</strong>.",
+  "integration.steps.catalogConfig.exampleLabel": "Enter the attribute names separated by commas. Example:",
+  "integration.steps.catalogConfig.example": "Size, Color, Pattern",
+  "integration.steps.catalogConfig.alertTitle": "Variation limit",
+  "integration.steps.catalogConfig.alertDescription": "TikTok Shop supports up to <strong>3 variations per product</strong>. Products exceeding this limit will have the variation ignored during integration.",
+  "integration.steps.requiredAttributes.title": "4. Mandatory Attributes (Composition / Ingredients)",
+  "integration.steps.requiredAttributes.description": "Some categories require composition or ingredient information to be sent to TikTok Shop.",
+  "integration.steps.requiredAttributes.example": "Example: Cosmetics",
+  "integration.steps.requiredAttributes.list": [
+    "The <strong>TikTok Composition</strong> field is mandatory for certain categories.",
+    "This field must be created as a <strong>SKU specification</strong> in VTEX and associated with the product category.",
+    "The composition or ingredient value must be <strong>filled directly in the SKU</strong>."
+  ],
+  "integration.steps.requiredAttributes.howTo.title": "How to configure the TikTok Composition field",
+  "integration.steps.requiredAttributes.howTo.steps": [
+    "In VTEX Admin, go to <strong>Catalog > Categories</strong>.",
+    "Select the product category and click <strong>Actions > Field (SKU)</strong>.",
+    "Click <strong>New Field</strong> and create the specification with the exact name <strong>TikTok Composition</strong>.",
+    "Save the field and then go to <strong>Catalog > Products and SKUs</strong>.",
+    "Select the product, open <strong>Specifications</strong>, and fill in the <strong>TikTok Composition</strong> field."
+  ],
+  "integration.steps.requiredAttributes.alertTitle": "Attention",
+  "integration.steps.requiredAttributes.alertDescription": "If the <strong>TikTok Composition</strong> field does not exist or is not filled, the integration will automatically send the default value <strong>\"Information currently unavailable.\"</strong> to TikTok Shop.",
+  "integration.steps.fashion.title": "5. Size Chart",
+  "integration.steps.fashion.description": "For products in the <strong>Fashion</strong> category, TikTok accepts the submission of a <strong>size chart</strong>.",
+  "integration.steps.fashion.upload": "The size chart can be uploaded in the <strong>Field Mapping</strong> tab of the connector.",
+  "integration.steps.fashion.pathLabel": "Path in VTEX Admin:",
+  "integration.steps.fashion.path": "VTEX Admin > Corebiz > TikTok Connector > Field Mapping",
+  "integration.steps.productCertification.title": "6. Product Certifications (Anatel/Inmetro/Etc)",
+  "integration.steps.productCertification.description": "Some categories, such as supplements, require certification proof before products can be published on TikTok Shop. In these cases, fill in the <strong>TikTok Certification</strong> field with the image link.",
+  "integration.steps.productCertification.howTo.title": "How to configure the TikTok Certification field in VTEX Admin",
+  "integration.steps.productCertification.howTo.steps": [
+    "Go to <strong>Catalog > Categories</strong>.",
+    "Select the product category and click <strong>Actions > Field (product)</strong>.",
+    "Click <strong>New Field</strong> and create the specification with the exact name <strong>TikTok Certification</strong>.",
+    "Save the field and then go to <strong>Catalog > Products and SKUs</strong>.",
+    "Select the product, open <strong>Specifications</strong>, and fill in the <strong>TikTok Certification</strong> field with the image link containing the expected details."
+  ],
+  "integration.steps.dashboard.title": "7. Integration Dashboard",
+  "integration.steps.dashboard.description": "After starting the integration, you can track the entire process through the <strong>Connector Dashboard</strong>.",
+  "integration.steps.dashboard.listIntro": "On the dashboard, you can view:",
+  "integration.steps.dashboard.list": [
+    "Total products",
+    "Products already existing on TikTok",
+    "Successfully integrated products",
+    "Products with errors",
+    "Unprocessed products",
+    "Detailed error reasons"
+  ],
+  "integration.steps.postIntegration.title": "8. Post-Integration Management",
+  "integration.steps.postIntegration.intro": "After the catalog integration, some processes become automatic.",
+  "integration.steps.postIntegration.stockPrice.title": "Stock and price synchronization",
+  "integration.steps.postIntegration.stockPrice.list": [
+    "Stock and base price updates are sent automatically.",
+    "Make sure the trade policy configured in the connector matches the one used in VTEX."
+  ],
+  "integration.steps.postIntegration.shippingLabels.title": "Shipping labels",
+  "integration.steps.postIntegration.shippingLabels.list": [
+    "Automatically generated by TikTok after the order is placed.",
+    "Available in the order within VTEX.",
+    "The label link is valid for approximately 2 days."
+  ],
+  "integration.steps.postIntegration.freeSamples.title": "Free samples (Creators)",
+  "integration.steps.postIntegration.freeSamples.list": [
+    "Tracking code submission is manual.",
+    "Orders enter VTEX with a value of $0.01."
+  ],
+  "integration.steps.postIntegration.returns.title": "Returns and exchanges",
+  "integration.steps.postIntegration.returns.description": "Return and exchange policies must be checked directly in the official TikTok Shop documentation.",
+  "contacts.title": "Important Contacts",
+  "contacts.description": "Here are the essential contacts for technical and commercial support related to the Corebiz VTEX + TikTok Shop connector.",
+  "docs.title": "Documentation",
+  "docs.description": "Step-by-step guides for installing, configuring, and using the connector.",
+  "docs.pages.prerequisites": "1. Prerequisites",
+  "docs.pages.createSeller": "2. Create a TikTok seller account",
+  "docs.pages.tiktokSetup": "3. TikTok Setup",
+  "docs.pages.createBrand": "4. Create a brand on TikTok",
+  "docs.pages.configureConnector": "5. Configure the VTEX connector",
+  "docs.pages.configureCredentials": "6. Configure credentials on VTEX",
+  "docs.pages.fieldMapping": "7. Field mapping",
+  "docs.pages.catalogIntegration": "8. Catalog integration",
+  "docs.pages.connectorVersions": "Connector version tracking",
+  "docs.pages.faq": "Frequently Asked Questions",
+  "docs.pages.shippingLabel": "Shipping label",
+  "faq.title": "Frequently Asked Questions",
+  "faq.description": "Frequently asked questions about configuration, orders, logistics, and catalog in the integration between VTEX and TikTok Shop.",
+  "faq.access.title": "Access and Initial Configuration",
+  "faq.access.appKey.question": "What is the format of the AppKey and AppToken and which permission profiles are required?",
+  "faq.access.appKey.answer": "It must have <strong>Owner (Super Admin) – Restricted permission.</strong>",
+  "faq.access.integrationInfo.question": "What information is required to integrate with VTEX?",
+  "faq.access.integrationInfo.items.tiktokToken": "Token generated in the TikTok Shop admin",
+  "faq.access.integrationInfo.items.vtexKeys": "VTEX APP-KEY and APP-TOKEN",
+  "faq.access.integrationInfo.items.tiktokAccountId": "TikTok account ID",
+  "faq.access.integrationInfo.items.tradePolicy": "Sales channel (trade policy)",
+  "faq.access.integrationInfo.items.orderPrefix": "Order identification prefix",
+  "faq.access.preConfig.question": "Is any pre-configuration required in the VTEX environment?",
+  "faq.access.preConfig.answer": "Yes. It is necessary to configure the marketplace in VTEX and have at least one active trade policy.",
+  "faq.access.preConfig.link": "View prerequisites",
+  "faq.clients.title": "Customer Registration",
+  "faq.clients.customers.question": "Are TikTok Shop customers registered in the VTEX customer list (CL)?",
+  "faq.clients.customers.answer": "No. Customers originating from TikTok Shop are not added to the VTEX customer list (CL).",
+  "faq.commercial.title": "Commercial Strategy and Policies",
+  "faq.commercial.policy.question": "Is it necessary to create a new trade policy for TikTok Shop?",
+  "faq.commercial.policy.answer": "Not necessarily. Creating a new trade policy is up to the merchant.",
+  "faq.payments.title": "Payment Methods",
+  "faq.payments.payment.question": "Which payment method appears on the order created in VTEX?",
+  "faq.payments.payment.answer": "The payment is shown as <strong>assumed by the TikTok Shop affiliate</strong>.",
+  "faq.logistics.title": "Shipping and Logistics",
+  "faq.logistics.shippingMethod.question": "What is the default shipping method on TikTok Shop?",
+  "faq.logistics.shippingMethod.answer": "The default method is <strong>“Shipped by the platform with standard shipping services”</strong>, automatically defined by TikTok.",
+  "faq.logistics.carriers.question": "Which carriers are available?",
+  "faq.logistics.carriers.list": "J&T, Correios, and Imile.",
+  "faq.logistics.carriers.note": "Each seller will be assigned to only one carrier after the first order.",
+  "faq.logistics.deliveryStatus.question": "How will I know when the order has been delivered?",
+  "faq.logistics.deliveryStatus.alertTitle": "Delivery status",
+  "faq.logistics.deliveryStatus.alertDescription": "Delivery confirmation is not displayed in VTEX. The last visible status will be the invoiced order.",
+  "faq.products.title": "Synchronization and Special Flows",
+  "faq.products.sync.question": "How does product synchronization work between VTEX and TikTok Shop?",
+  "faq.products.sync.paragraphs.intro": "The integration between VTEX and TikTok Shop ensures that <strong>stock</strong> and <strong>base price</strong> (price without discounts) information is always up to date across both platforms.",
+  "faq.products.sync.paragraphs.updateFlow": "Whenever there is a change in stock or base price of a product in VTEX, this update is automatically sent to TikTok Shop, preventing the sale of items with outdated prices or unavailable stock.",
+  "faq.products.sync.paragraphs.realtime": "Synchronization happens <strong>automatically and in real time</strong>, as long as the product is properly published and linked between the platforms.",
+  "faq.products.sync.alert.title": "Important note",
+  "faq.products.sync.alert.description": "Stock and price synchronization considers the <strong>trade policy configured in the connector panel</strong>. Make sure the trade policy used in VTEX to display prices and control stock is the same one configured for synchronization with TikTok Shop.",
+  "faq.products.samples.question": "How does free sample shipping for creators work?",
+  "faq.products.samples.paragraphs.flow": "Free sample shipping follows a different flow compared to standard TikTok Shop orders and is handled in a more manual way.",
+  "faq.products.samples.paragraphs.tracking": "Currently, TikTok has limitations regarding compatible carriers for this type of shipment. Therefore, it is necessary to generate and manually insert the <strong>tracking code</strong> in VTEX, either directly in the order or via ERP.",
+  "faq.products.samples.paragraphs.automation": "To streamline this process, an automation was created in the connector so that the tracking code informed in VTEX is automatically sent to TikTok Shop.",
+  "faq.products.samples.paragraphs.value": "Free sample orders enter VTEX with a value of <strong>R$ 0.01</strong>, since the system does not allow invoicing orders with a value of <strong>R$ 0.00</strong>.",
+  "faq.products.samples.alert.title": "Important",
+  "faq.products.samples.alert.description": "Since free sample delivery is not handled by TikTok Shop, <strong>the shipping label is not issued by TikTok</strong>.",
+  "shippingLabel.title": "Shipping Label",
+  "shippingLabel.description": "After an order is placed and the invoice is submitted, the shipping label is automatically generated by TikTok and sent to VTEX.",
+  "shippingLabel.howToView": "How to view the shipping label in VTEX:",
+  "shippingLabel.steps.step1": "Access the VTEX Admin.",
+  "shippingLabel.steps.step2": "Go to Marketplace > Orders.",
+  "shippingLabel.steps.step3": "Find the desired order in the list.",
+  "shippingLabel.steps.step4": "The shipping label link will be available in the Tracking Number field.",
+  "shippingLabel.afterClick": "After clicking the tracking number link, click <strong>\"Go to the carrier tracking page\".</strong>",
+  "shippingLabel.important.title": "Important:",
+  "shippingLabel.important.description": "The link generated by TikTok is valid for approximately <strong>2 days</strong>. We recommend downloading the shipping label within this period.",
+  "shippingLabel.note.title": "Note:",
+  "shippingLabel.note.description": "For the <strong>first order placed</strong>, we recommend generating the shipping label <strong>manually</strong> directly in the TikTok Shop dashboard. This is necessary because additional shipping configurations may be required on the TikTok account. After this initial setup, shipping labels for subsequent orders will be generated automatically."
 }
