@@ -352,6 +352,8 @@
   "faq.products.sync.paragraphs.realtime": "A sincronização ocorre de forma <strong>automática e em tempo real</strong>, desde que o produto esteja devidamente publicado e vinculado entre as plataformas.",
   "faq.products.sync.alert.title": "Observação importante",
   "faq.products.sync.alert.description": "A sincronização de estoque e preço considera a <strong>política comercial configurada no painel do conector</strong>. Certifique-se de que a política utilizada na VTEX para exibir preços e controlar estoque seja a mesma configurada para sincronização com o TikTok Shop.",
+  "faq.products.images.question": "Qual é o limite de fotos por produto no TikTok Shop?",
+  "faq.products.images.answer": "O TikTok Shop aceita até <strong>9 imagens por produto</strong>. Caso o produto tenha mais fotos na VTEX, apenas as nove primeiras serão consideradas na integração.",
   "faq.products.samples.question": "Como funciona o envio de amostras grátis para creators?",
   "faq.products.samples.paragraphs.flow": "O envio de amostras grátis possui um fluxo diferente do envio padrão de pedidos no TikTok Shop e é realizado de forma mais manual.",
   "faq.products.samples.paragraphs.tracking": "Atualmente, o TikTok possui limitações quanto às transportadoras compatíveis para esse tipo de envio. Por isso, é necessário gerar e inserir o <strong>código de rastreio manualmente</strong> na VTEX, seja diretamente no pedido ou via ERP.",

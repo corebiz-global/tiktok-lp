@@ -43,6 +43,17 @@ export function Products() {
         </CustomAccordionContent>
       </CustomAccordionItem>
 
+      {/* Quantidade de imagens */}
+      <CustomAccordionItem value="product-images-limit">
+        <CustomAccordionTrigger>{t("faq.products.images.question")}</CustomAccordionTrigger>
+
+        <CustomAccordionContent className="space-y-3">
+          <p>
+            <Trans i18nKey="faq.products.images.answer" />
+          </p>
+        </CustomAccordionContent>
+      </CustomAccordionItem>
+
       {/* Amostras grátis */}
       <CustomAccordionItem value="free-samples">
         <CustomAccordionTrigger>{t("faq.products.samples.question")}</CustomAccordionTrigger>

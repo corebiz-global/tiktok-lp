@@ -351,6 +351,8 @@
   "faq.products.sync.paragraphs.realtime": "Synchronization happens <strong>automatically and in real time</strong>, as long as the product is properly published and linked between the platforms.",
   "faq.products.sync.alert.title": "Important note",
   "faq.products.sync.alert.description": "Stock and price synchronization considers the <strong>trade policy configured in the connector panel</strong>. Make sure the trade policy used in VTEX to display prices and control stock is the same one configured for synchronization with TikTok Shop.",
+  "faq.products.images.question": "What is the photo limit per product on TikTok Shop?",
+  "faq.products.images.answer": "TikTok Shop accepts up to <strong>9 images per product</strong>. If the product has more photos in VTEX, only the first nine will be considered during integration.",
   "faq.products.samples.question": "How does free sample shipping for creators work?",
   "faq.products.samples.paragraphs.flow": "Free sample shipping follows a different flow compared to standard TikTok Shop orders and is handled in a more manual way.",
   "faq.products.samples.paragraphs.tracking": "Currently, TikTok has limitations regarding compatible carriers for this type of shipment. Therefore, it is necessary to generate and manually insert the <strong>tracking code</strong> in VTEX, either directly in the order or via ERP.",

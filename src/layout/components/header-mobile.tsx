@@ -72,6 +72,11 @@ export function HeaderMobile() {
                   {t("header.nav.docs")}
                 </Link>
               </DrawerClose>
+              <DrawerClose asChild>
+                <Link href="/faq" className="text-base font-medium text-neutral-100 hover:text-white">
+                  {t("docs.pages.faq")}
+                </Link>
+              </DrawerClose>
 
               <DrawerClose asChild>
                 <Link href="/contacts" className="text-base font-medium text-neutral-100 hover:text-white">

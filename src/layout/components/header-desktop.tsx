@@ -31,6 +31,9 @@ export function HeaderDesktop() {
           <Link href="/docs" className="text-sm font-medium text-neutral-100 hover:text-white">
             {t("header.nav.docs")}
           </Link>
+          <Link href="/faq" className="text-sm font-medium text-neutral-100 hover:text-white">
+            {t("docs.pages.faq")}
+          </Link>
           <Link href="/contacts" className="text-sm font-medium text-neutral-100 hover:text-white">
             {t("header.nav.contact")}
           </Link>
