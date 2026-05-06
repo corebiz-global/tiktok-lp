@@ -107,11 +107,15 @@ export default function MapeamentoDeCampos() {
           <Section title={t(`${base}.catalogConfig.title`)}>
             <FieldList>
               <FieldItem
+                label={t(`${base}.catalogConfig.minimumStock.label`)}
+                description={t(`${base}.catalogConfig.minimumStock.description`)}
+              />
+
+              <FieldItem
                 label={t(`${base}.catalogConfig.variation.label`)}
                 description={t(`${base}.catalogConfig.variation.description`)}
               />
             </FieldList>
-
             <Alert className="mt-3 rounded-xl">
               <InfoIcon className="h-4 w-4" />
               <AlertDescription>{t(`${base}.catalogConfig.limit`)}</AlertDescription>
